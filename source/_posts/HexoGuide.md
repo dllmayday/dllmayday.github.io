@@ -62,3 +62,9 @@ categories:
 ```
 页面显示如下:
 ![alt text](../images/subcatory.png)
+
+# 隐藏网页底部 powered By Hexo
+
+去对应使用主题themes/landscape/layout/_partial/查找文件footer.ejs，删除powered_by所在行行
+
+![alt text](../images/hidepowerby.png)
