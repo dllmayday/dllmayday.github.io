@@ -51,3 +51,14 @@ copyright: true     //增加底部的版权信息（需要配置）
 <hr />
 版权信息
 ```
+## 父子分类
+new post front-matter按如下添加
+技术分享为父分类
+Hexo为子分类
+```
+categories: 
+- 技术分享
+- Hexo
+```
+页面显示如下:
+![alt text](../images/subcatory.png)
