@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>LearnHexo | Starry Don&#39;s BLOG 仰望星空,脚踏实地</title>
+  <title>Hexo快速入门 | Starry Don&#39;s BLOG 仰望星空,脚踏实地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LearnHexo">
-<meta property="og:url" content="http://example.com/2024/02/04/LearnHexo/index.html">
+<meta property="og:title" content="Hexo快速入门">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/04/LearnHexo/index.html">
 <meta property="og:site_name" content="Starry Don&#39;s BLOG 仰望星空,脚踏实地">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-04T07:26:53.788Z">
-<meta property="article:modified_time" content="2024-02-05T06:09:33.506Z">
+<meta property="article:modified_time" content="2024-02-05T06:55:45.199Z">
 <meta property="article:author" content="Starry Don">
+<meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Starry Don's BLOG 仰望星空,脚踏实地" type="application/atom+xml">
@@ -70,7 +71,7 @@
         <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dllmayday.github.io"></form>
       </div>
     </div>
   </div>
@@ -95,7 +96,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      LearnHexo
+      Hexo快速入门
     </h1>
   
 
@@ -104,26 +105,31 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<h3 id="Create-a-new-page"><a href="#Create-a-new-page" class="headerlink" title="Create a new page"></a>Create a new page</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page <span class="string">&quot;My New Page&quot;</span></span><br><span class="line"></span><br><span class="line">More info: [Writing](https://hexo.io/docs/writing.html)</span><br><span class="line"></span><br><span class="line"><span class="comment">### Run server</span></span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">$ hexo server </span><br><span class="line"><span class="comment">#或缩写</span></span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"><span class="comment">#或缩写</span></span><br><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"><span class="comment">#或缩写</span></span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="Remove-generated-files-and-cache"><a href="#Remove-generated-files-and-cache" class="headerlink" title="Remove generated files and cache."></a>Remove generated files and cache.</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/04/LearnHexo/" data-id="cls8j8yob00011wv56xg7ag87" data-title="LearnHexo" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/04/LearnHexo/" data-id="cls8lmaer0001scv57ntf8mwi" data-title="Hexo快速入门" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
     </footer>
   </div>
   
@@ -134,7 +140,7 @@
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          年度总结
+          一份来自ChatGPT的年度总结
         
       </div>
     </a>
@@ -161,9 +167,23 @@
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -182,11 +202,15 @@
       <ul>
         
           <li>
-            <a href="/2024/02/05/summary2024/">年度总结</a>
+            <a href="/2024/02/05/HexoGuide/">Hexo使用技巧</a>
           </li>
         
           <li>
-            <a href="/2024/02/04/LearnHexo/">LearnHexo</a>
+            <a href="/2024/02/05/summary2024/">一份来自ChatGPT的年度总结</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/04/LearnHexo/">Hexo快速入门</a>
           </li>
         
       </ul>
