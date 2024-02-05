@@ -4,6 +4,7 @@ date: 2024-02-05 14:42:53
 tags: Hexo
 categories:
 - 技术分享
+- Hexo
 ---
 
 ## 使用技巧
