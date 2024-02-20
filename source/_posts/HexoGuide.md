@@ -69,3 +69,15 @@ categories:
 去对应使用主题themes/landscape/layout/_partial/查找文件footer.ejs，删除powered_by所在行行
 
 ![alt text](../images/hidepowerby.png)
+
+
+# 使用github issue存放评论
+
+
+<script src="https://utteranc.es/client.js"
+        repo="https://github.com/dllmayday/dllmayday.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
