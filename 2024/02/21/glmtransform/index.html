@@ -9,12 +9,12 @@
   <meta name="description" content="变换方式包括旋转、平移、缩放。 当多种变化叠加影响时按照从后到前的方式进行运算 矩阵运算不满足交换律">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GLM矩阵变换">
-<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/glmtransform%20copy/index.html">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/glmtransform/index.html">
 <meta property="og:site_name" content="仰望星空,脚踏实地">
 <meta property="og:description" content="变换方式包括旋转、平移、缩放。 当多种变化叠加影响时按照从后到前的方式进行运算 矩阵运算不满足交换律">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-21T03:18:18.000Z">
-<meta property="article:modified_time" content="2024-02-21T06:35:19.065Z">
+<meta property="article:modified_time" content="2024-02-21T10:19:12.233Z">
 <meta property="article:author" content="Starry Don">
 <meta property="article:tag" content="GLM">
 <meta name="twitter:card" content="summary">
@@ -84,9 +84,9 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-glmtransform copy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-glmtransform" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/02/21/glmtransform%20copy/" class="article-date">
+    <a href="/2024/02/21/glmtransform/" class="article-date">
   <time class="dt-published" datetime="2024-02-21T03:18:18.000Z" itemprop="datePublished">2024-02-21</time>
 </a>
     
@@ -115,17 +115,17 @@
 <p>矩阵运算不满足交换律</p>
 <span id="more"></span>
 
-<p>例如:<br>从移动，再绕z轴逆时针旋转一个角度，最后将其缩放0.5倍</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 trans(1.0f);</span><br><span class="line">trans = glm::scale(trans, glm::vec3(0.5,0.5,0.5));</span><br><span class="line">trans=  glm::rotate(trans,M_PI/2,glm::vec3(0.0,0.0,1.0));</span><br><span class="line">trans=  glm::transform(trans,glm::vec3(0.5,0.5,0.5));</span><br></pre></td></tr></table></figure>
-<p>或者写作如下方式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 identity(1.0f);</span><br><span class="line">glm::mat4 scalmat= glm::scale(identity, glm::vec3(0.5,0.5,0.5));</span><br><span class="line">glm::mat4 rotatemat=  glm::rotate(identity,M_PI/2,glm::vec3(0.0,0.0,1.0));</span><br><span class="line">glm::mat4 transformmat=  glm::transform(identity,glm::vec3(0.5,0.5,0.5));</span><br><span class="line">trans =scalmat * rotatemat *transformmat; </span><br></pre></td></tr></table></figure>
+<p>例如:<br>先平移，再绕z轴逆时针旋转一个角度，最后将其缩放0.5倍</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 trans(1.0f);</span><br><span class="line">trans=  glm::translate(trans,glm::vec3(0.5,0.5,0.5));</span><br><span class="line">trans=  glm::rotate(trans,M_PI/2,glm::vec3(0.0,0.0,1.0));</span><br><span class="line">trans = glm::scale(trans, glm::vec3(0.5,0.5,0.5));</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在GLM中，矩阵相乘的顺序是从右到左的，这意味着右边的矩阵先应用，然后左边的矩阵应用。这是因为GLM遵循了OpenGL的标准，而OpenGL中矩阵乘法也是以列主序（Column-Major Order）进行的。<br>直接矩阵相乘写作如下方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 identity(1.0f);</span><br><span class="line">glm::mat4 translatemat=  glm::translate(identity,glm::vec3(0.5,0.5,0.5));</span><br><span class="line">glm::mat4 rotatemat=  glm::rotate(identity,M_PI/2,glm::vec3(0.0,0.0,1.0));</span><br><span class="line">glm::mat4 scalemat= glm::scale(identity, glm::vec3(0.5,0.5,0.5));</span><br><span class="line">trans =scalemat * rotatemat * translatemat; </span><br></pre></td></tr></table></figure>
 
 <hr />
 版权信息
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/21/glmtransform%20copy/" data-id="clsvhos5o000v30v50ucggnmo" data-title="GLM矩阵变换" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/21/glmtransform/" data-id="clsvnahht000vd8v55bg3g8mg" data-title="GLM矩阵变换" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
