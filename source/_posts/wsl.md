@@ -1,7 +1,9 @@
 ---
 title: WSL图像界面安装
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- 实用技巧
 tags: WSL
 description: //文章描述
 image: //自定义的文章摘要图片，只在页面展示，文章内消失

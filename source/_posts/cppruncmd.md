@@ -1,7 +1,9 @@
 ---
 title: C++代码内部执行命令方法
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- 实用技巧
 tags: cmd
 description: 
 image: 

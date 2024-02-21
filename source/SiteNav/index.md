@@ -1,12 +1,6 @@
 ---
 title: 站点导航
-permalink: 
-categories: 站点导航
-tags: 
-description: 
-image: //自定义的文章摘要图片，只在页面展示，文章内消失
-copyright: true     //增加底部的版权信息（需要配置）
-date: 2024-02-20 13:59:09
+date: 2024-02-21 14:40:49
 ---
 ## 系列教程
 [w3cschool](https://www.w3cschool.cn/) | [菜鸟教程](https://www.runoob.com/) | [CV系列教程 (showmeai.tech)](https://www.showmeai.tech/tutorials/37)

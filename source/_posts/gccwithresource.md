@@ -1,7 +1,9 @@
 ---
 title: gcc编译时嵌入资源文件
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- 实用技巧
 tags: CMRC
 description: 
 image: 

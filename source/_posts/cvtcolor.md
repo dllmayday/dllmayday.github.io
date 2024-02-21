@@ -1,7 +1,9 @@
 ---
 title: 颜色转换
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- colorspace
 tags: Color
 description: 
 image: 

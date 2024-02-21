@@ -1,7 +1,9 @@
 ---
 title: 几何变换
 permalink: 
-categories: 数学
+categories: 
+- 技术分享
+- 数学
 tags: 几何
 description: 
 image: 

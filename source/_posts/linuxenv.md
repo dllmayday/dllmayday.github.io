@@ -1,7 +1,9 @@
 ---
 title: Linux中修改环境变量及生效方法
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- Linux
 tags: 环境变量
 description: 
 image: 

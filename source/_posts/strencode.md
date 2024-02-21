@@ -1,7 +1,9 @@
 ---
 title: 判断字符串编码方式
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- 实用技巧
 tags: encoding
 description: 
 image: 

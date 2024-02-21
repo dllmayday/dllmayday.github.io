@@ -1,7 +1,9 @@
 ---
 title: Beyond Compare密钥失效解决
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- 实用技巧
 tags: Beyond Compare
 description: 
 image: 

@@ -1,7 +1,9 @@
 ---
 title: windows下查找程序运行所需要的依赖库
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- 实用技巧
 tags: dependents
 description: 
 image: 

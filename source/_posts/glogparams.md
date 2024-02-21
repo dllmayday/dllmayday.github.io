@@ -1,7 +1,9 @@
 ---
 title: GLOG参数说明
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- GLOG
 tags: glog
 description: 
 image: 

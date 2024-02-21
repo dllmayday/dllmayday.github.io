@@ -1,7 +1,9 @@
 ---
 title: linuxcommond
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- Linux
 tags: Linux
 description: 
 image: 

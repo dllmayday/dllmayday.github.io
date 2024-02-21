@@ -1,7 +1,9 @@
 ---
 title: VisualStudio Release模型下调试设置
 permalink: 
-categories: 实用技巧
+categories: 
+- 技术分享
+- Visual Studio
 tags: VisualStudio
 description: 
 image: 
