@@ -24,7 +24,34 @@ df -h
 du -sh
 
 ``` 
-## 0x04
+## 依赖
+1. 查看依赖的库：
+```
+objdump -x xxx.so | grep NEEDED
+```
+2. 查看可执行程序依赖的库：
+```
+objdump -x 可执行程序名 | grep NEEDED
+```
+3. 查看库导出函数
+```
+objdump -tT xxx.so
+nm -D xxx.so
+```
+查看符号表 地址：
+```
+objdump -tT libName.so | grep symbel symbolName
+nm -D libName.so | grep symbel symbolName
+```
+
+4. 查看缺少的库：
+```
+ldd xxx.so
+```
+5. 查看库版本编译等信息：
+strings  xxx.so
+
+
 
 <hr />
 版权信息
