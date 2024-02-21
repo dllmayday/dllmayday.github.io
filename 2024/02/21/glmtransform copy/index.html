@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>tar包加密 | 仰望星空,脚踏实地</title>
+  <title>GLM矩阵变换 | 仰望星空,脚踏实地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="打包&amp;加密1tar -zcvf - cc | openssl des3 -salt -k [passwd] | dd of&#x3D;[package_name].des3   解密&amp;解包1dd if&#x3D;[package_name].des3 | openssl des3 -d -k [passwd]  | tar zxf -   版权信息">
+  <meta name="description" content="变换方式包括旋转、平移、缩放。 当多种变化叠加影响时按照从后到前的方式进行运算 矩阵运算不满足交换律">
 <meta property="og:type" content="article">
-<meta property="og:title" content="tar包加密">
-<meta property="og:url" content="https://dllmayday.github.io/2024/02/20/tarpackagelock/index.html">
+<meta property="og:title" content="GLM矩阵变换">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/glmtransform%20copy/index.html">
 <meta property="og:site_name" content="仰望星空,脚踏实地">
-<meta property="og:description" content="打包&amp;加密1tar -zcvf - cc | openssl des3 -salt -k [passwd] | dd of&#x3D;[package_name].des3   解密&amp;解包1dd if&#x3D;[package_name].des3 | openssl des3 -d -k [passwd]  | tar zxf -   版权信息">
+<meta property="og:description" content="变换方式包括旋转、平移、缩放。 当多种变化叠加影响时按照从后到前的方式进行运算 矩阵运算不满足交换律">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-20T08:28:12.000Z">
-<meta property="article:modified_time" content="2024-02-20T08:31:02.951Z">
+<meta property="article:published_time" content="2024-02-21T03:18:18.000Z">
+<meta property="article:modified_time" content="2024-02-21T03:19:52.406Z">
 <meta property="article:author" content="Starry Don">
-<meta property="article:tag" content="tar">
+<meta property="article:tag" content="GLM">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
@@ -82,10 +82,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-tarpackagelock" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-glmtransform copy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/02/20/tarpackagelock/" class="article-date">
-  <time class="dt-published" datetime="2024-02-20T08:28:12.000Z" itemprop="datePublished">2024-02-20</time>
+    <a href="/2024/02/21/glmtransform%20copy/" class="article-date">
+  <time class="dt-published" datetime="2024-02-21T03:18:18.000Z" itemprop="datePublished">2024-02-21</time>
 </a>
     
   <div class="article-category">
@@ -100,7 +100,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      tar包加密
+      GLM矩阵变换
     </h1>
   
 
@@ -108,21 +108,26 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="打包-加密"><a href="#打包-加密" class="headerlink" title="打包&amp;加密"></a>打包&amp;加密</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf - cc | openssl des3 -salt -k [passwd] | dd of=[package_name].des3</span><br></pre></td></tr></table></figure>
+        <p>变换方式包括旋转、平移、缩放。</p>
+<p>当多种变化叠加影响时按照从后到前的方式进行运算</p>
+<p>矩阵运算不满足交换律</p>
+<span id="more"></span>
 
-
-<h2 id="解密-解包"><a href="#解密-解包" class="headerlink" title="解密&amp;解包"></a>解密&amp;解包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dd if=[package_name].des3 | openssl des3 -d -k [passwd]  | tar zxf -</span><br></pre></td></tr></table></figure>
+<p>例如:<br>从移动，再绕z轴逆时针旋转一个角度，最后将其缩放0.5倍</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 trans(1.0f);</span><br><span class="line">trans = glm::scale(trans, glm::vec3(0.5,0.5,0.5));</span><br><span class="line">trans=  glm::rotate(trans,M_PI/2,glm::vec3(0.0,0.0,1.0));</span><br><span class="line">trans=  glm::transform(trans,glm::vec3(0.5,0.5,0.5));</span><br></pre></td></tr></table></figure>
+<p>或者写作如下方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">glm::mat4 identity(1.0f);</span><br><span class="line">glm::mat4 scalmat= glm::scale(identity, glm::vec3(0.5,0.5,0.5));</span><br><span class="line">glm::mat4 rotatemat=  glm::rotate(identity,M_PI/2,glm::vec3(0.0,0.0,1.0));</span><br><span class="line">glm::mat4 transformmat=  glm::transform(identity,glm::vec3(0.5,0.5,0.5));</span><br><span class="line">trans =scalmat * rotatemat *transformmat; </span><br></pre></td></tr></table></figure>
 
 <hr />
 版权信息
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/20/tarpackagelock/" data-id="clsv7ngd6000z1gv5583ocpci" data-title="tar包加密" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/21/glmtransform%20copy/" data-id="clsv8eo0a00016sv578aufdmk" data-title="GLM矩阵变换" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tar/" rel="tag">tar</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GLM/" rel="tag">GLM</a></li></ul>
 
     </footer>
   </div>
@@ -130,19 +135,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/02/20/gccwithresource/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/02/21/eulor/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          gcc编译时嵌入资源文件
+          欧拉角
         
       </div>
     </a>
   
   
-    <a href="/2024/02/20/geometrytranform/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2024/02/21/linuxenv/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">几何变换</div>
+      <div class="article-nav-title">Linux中修改环境变量及生效方法</div>
     </a>
   
 </nav>

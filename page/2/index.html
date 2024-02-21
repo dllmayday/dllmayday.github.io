@@ -79,6 +79,158 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-beyondcompare" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/20/beyondcompare/" class="article-date">
+  <time class="dt-published" datetime="2024-02-20T09:02:40.000Z" itemprop="datePublished">2024-02-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/20/beyondcompare/">Beyond Compare密钥失效解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>查找路径<br>C:\Users&lt;用户名&gt;\AppData\Roaming\Scooter Software\Beyond Compare 4<br>删除除BC4Key.txt外所有文件</p>
+<article class="baidu_pl" style="box-sizing: inherit; outline: 0px; display: block; position: relative; padding-top: 16px;">
+第二种办法
+删除C:\Program Files\Beyond Compare 4\BCUnrar.dll（安装目录下的BCUnrar.dll文件]），这个文件重命名或者直接删除。
+
+<p>第三种办法<br>修改注册表<br>1、在搜索栏中输入 regedit ，打开注册表<br>2、删除项目CacheId ：<br>HKEY_CURRENT_USER\Software\Scooter Software\Beyond Compare 4\CacheId</p>
+<hr />
+版权信息
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/20/beyondcompare/" data-id="clsv7ngcv00071gv5cbcrdr32" data-title="Beyond Compare密钥失效解决" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Beyond-Compare/" rel="tag">Beyond Compare</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-vmwareubuntu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/20/vmwareubuntu/" class="article-date">
+  <time class="dt-published" datetime="2024-02-20T09:00:32.000Z" itemprop="datePublished">2024-02-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/20/vmwareubuntu/">vmware-ubuntu使用问题解决</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="无法联网"><a href="#无法联网" class="headerlink" title="无法联网"></a>无法联网</h2><p>sudo service network-manager stop<br>sudo rm &#x2F;var&#x2F;lib&#x2F;NetworkManager&#x2F;NetworkManager.state<br>sudo service network-manager start</p>
+<p>sudo gedit &#x2F;etc&#x2F;NetworkManager&#x2F;NetworkManager.conf<br>把 managed &#x3D;false改成true</p>
+<h2 id="磁盘空间压缩"><a href="#磁盘空间压缩" class="headerlink" title="磁盘空间压缩"></a>磁盘空间压缩</h2><p>sudo &#x2F;usr&#x2F;bin&#x2F;vmware-toolbox-cmd disk list<br>sudo &#x2F;usr&#x2F;bin&#x2F;vmware-toolbox-cmd disk shrink &#x2F;</p>
+<h2 id="ubuntu系统安装中文输入法"><a href="#ubuntu系统安装中文输入法" class="headerlink" title="ubuntu系统安装中文输入法"></a>ubuntu系统安装中文输入法</h2><p>一. 安装输入法<br>下面任选一种即可：</p>
+<p>IBus拼音：sudo apt-get install ibus-pinyin （命令解释：sudo 以超级权限去执行，apt-get install 安装一个新软件包 ibus-pinyin软件包名称）<br>谷歌拼音输入法：sudo apt-get install ibus-googlepinyin<br>Sun拼音输入法：sudo apt-get install ibus-sunpinyin<br>二.配置输入法：<br>终端里面输入ibus-setup，输入法的配置界面就会弹出，IBus Preference设置被打开。我们在Input Method选项卡中，选择自己喜欢的输入方式，并配置自己喜欢的快捷键即可。<br>注意：如果发现切换中英文的小图标在左上角没有出现，可以打开系统设置在地区和语言中添加Chinese（pinyin）就会显示</p>
+<p>若以上步骤无效时，参考一下步骤：<br>打开命令行依次输入：</p>
+<p>sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4<br>启动：im-config -s -ibus<br>安装pinyin引擎：sudo apt-get install ibus-pinyin<br>打开设置：ibus-setup，添加pinyin</p>
+<hr />
+版权信息
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/20/vmwareubuntu/" data-id="clsv7ngd700121gv5c5bc6rj9" data-title="vmware-ubuntu使用问题解决" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vmware/" rel="tag">vmware</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-cvtcolor" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/20/cvtcolor/" class="article-date">
+  <time class="dt-published" datetime="2024-02-20T08:53:20.000Z" itemprop="datePublished">2024-02-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/20/cvtcolor/">颜色转换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>misc colorspace conversion functions</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/02/20/cvtcolor/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/20/cvtcolor/" data-id="clsv7ngcy00091gv52wtbh4ox" data-title="颜色转换" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Color/" rel="tag">Color</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-gccwithresource" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/02/20/gccwithresource/" class="article-date">
@@ -115,7 +267,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/20/gccwithresource/" data-id="clsv6yya3000drsv58jwr1m4m" data-title="gcc编译时嵌入资源文件" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/20/gccwithresource/" data-id="clsv7ngd1000e1gv5bc9339w5" data-title="gcc编译时嵌入资源文件" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -165,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/20/tarpackagelock/" data-id="clsv6yya9000ursv50tfs2tk6" data-title="tar包加密" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/20/tarpackagelock/" data-id="clsv7ngd6000z1gv5583ocpci" data-title="tar包加密" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -214,7 +366,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/20/geometrytranform/" data-id="clsv6yya5000irsv5ee0ogu1e" data-title="几何变换" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/20/geometrytranform/" data-id="clsv7ngd2000i1gv56yvlhauv" data-title="几何变换" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -266,7 +418,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/20/SiteNav/" data-id="clsv6yya00007rsv5dll16le8" data-title="站点导航" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/20/SiteNav/" data-id="clsv7ngcy00081gv56ojscpnm" data-title="站点导航" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -314,7 +466,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/05/HexoGuide/" data-id="clsv6yy9v0001rsv597ox33w7" data-title="Hexo使用技巧" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/05/HexoGuide/" data-id="clsv7ngcp00011gv5c83o8m0v" data-title="Hexo使用技巧" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -363,7 +515,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/05/summary2024/" data-id="clsv6yya8000srsv5b01g7pcy" data-title="一份来自ChatGPT的年度总结" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/05/summary2024/" data-id="clsv7ngd5000v1gv52j0scbnb" data-title="一份来自ChatGPT的年度总结" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -410,7 +562,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/04/LearnHexo/" data-id="clsv6yy9x0003rsv5fmrpcun9" data-title="Hexo快速入门" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/04/LearnHexo/" data-id="clsv7ngcr00031gv5d7vibc95" data-title="Hexo快速入门" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -449,7 +601,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a>
+      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/GLM/" style="font-size: 10px;">GLM</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a> <a href="/tags/%E6%AC%A7%E6%8B%89%E8%A7%92/" style="font-size: 10px;">欧拉角</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 10px;">环境变量</a>
     </div>
   </div>
 
@@ -471,23 +623,23 @@
       <ul>
         
           <li>
+            <a href="/2024/02/21/eulor/">欧拉角</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/glmtransform%20copy/">GLM矩阵变换</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/linuxenv/">Linux中修改环境变量及生效方法</a>
+          </li>
+        
+          <li>
             <a href="/2024/02/21/cppruncmd/">C++代码内部执行命令方法</a>
           </li>
         
           <li>
             <a href="/2024/02/20/winfindlib/">windows下查找程序运行所需要的依赖库</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/20/vsreleasemodedebug/">VisualStudio Release模型下调试设置</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/20/strencode/">判断字符串编码方式</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/20/wsl/">WSL图像界面安装</a>
           </li>
         
       </ul>
