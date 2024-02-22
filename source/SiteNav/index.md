@@ -39,7 +39,7 @@ date: 2024-02-21 14:40:49
 
 # AI会话
 
-[Copilot - Microsoft](https://copilot.microsoft.com/) | [ChatGPT- OpenAI](https://chat.openai.com/) | [Bard - Google](https://bard.google.com/chat) | [文心一言 - Baidu](https://yiyan.baidu.com/)
+[Copilot - Microsoft](https://copilot.microsoft.com/) | [ChatGPT- OpenAI(outlook)](https://chat.openai.com/) | [Bard - Google](https://bard.google.com/chat) | [文心一言 - Baidu](https://yiyan.baidu.com/)
 
 # AI绘画
 
@@ -54,6 +54,7 @@ date: 2024-02-21 14:40:49
 [filehorse - app download](https://www.filehorse.com/)
 [矢量素材库](https://www.iconfont.cn/)
 [JSFiddle-HTML/CSS/JS效果预览](https://jsfiddle.net/)
+[V2free(foxmail)](https://w1.v2ai.top/user)
 
 <hr />
 版权信息
