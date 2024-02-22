@@ -253,5 +253,20 @@
 
 
   </div>
+  <div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+id: '页面 ID', // 可选。默认为 location.href
+owner: 'dllmayday',
+repo: 'dllmayday.github.io',
+oauth: {
+    client_id: '324925ad5c54f902db23',
+    client_secret: 'e580ea82f1f39c276774309e5628dc126a3a40c8',
+},
+})
+gitment.render('container')
+</script>
 </body>
 </html>
