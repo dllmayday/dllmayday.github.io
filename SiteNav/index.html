@@ -265,5 +265,22 @@
 
 
   </div>
+  <div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+var gitalk = new Gitalk({
+  clientID: '2ceec9768754a29069c7', // OAuth应用clientID
+  clientSecret: 'c9544f9e915c128c49909b3325ace37dc7bac22f', // OAuth应用clientSecret
+  repo: 'blog', // 仓库名字，不能是仓库全路径，后面也不能有 .git
+  owner: 'coder-linx', // GitHub repository 所有者，可以是个人或者组织。
+  admin: ['coder-linx'], // GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+  id: 'example-gitalk',      // 页面的唯一标识。长度必须小于50
+  distractionFreeMode: false  // 类似Facebook的无干扰模式
+});
+
+gitalk.render('gitalk-container');
+</script>
 </body>
 </html>
