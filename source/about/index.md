@@ -17,7 +17,7 @@ date: 2024-02-05 09:44:46
 ## 个人账号:
 
 [GitHub-ne](https://github.com/dllmayday) | [CSDN-ne](https://blog.csdn.net/sinat_34665848?type=blog) | [简书-wb](https://www.jianshu.com/u/05bf152278b9)
-[gitee-ne](https://gitee.com/dllmayday) | [oschina-ne](https://my.oschina.net/dllmayday) |[Gitlab-ne](https://gitlab.com/dllmayday)
+[gitee-ne](https://gitee.com/dllmayday) | [oschina-ne](https://my.oschina.net/dllmayday) |[Gitlab-ne](https://gitlab.com/dllmayday)| [atlassian](https://starrydon1024.atlassian.net/)
 
 下面是本站的相关信息：
 - [博客统计]()
