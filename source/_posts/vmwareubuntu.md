@@ -46,5 +46,23 @@ sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 安装pinyin引擎：sudo apt-get install ibus-pinyin
 打开设置：ibus-setup，添加pinyin
 
+## VMware 上使用 Ubuntu 20 虚拟机时无法显示共享磁盘的问题解决
+
+VMware Tools 安装： 确保您已经在 Ubuntu 20 虚拟机中安装了 VMware Tools。VMware Tools 提供了一些增强功能，包括共享文件夹的支持。您可以在 VMware 虚拟机菜单中找到安装 VMware Tools 的选项。
+
+共享文件夹设置： 在 VMware 虚拟机设置中，确保已正确配置共享文件夹。您可以通过编辑虚拟机设置，然后在 “选项” 标签卡下选择 “共享文件夹” 来配置共享文件夹。
+
+检查权限： 确保您在 Ubuntu 中有足够的权限访问共享文件夹。确保您的用户属于正确的用户组，并且有权限读取和写入共享文件夹。
+
+重新挂载共享文件夹： 在 Ubuntu 中，您可以尝试重新挂载共享文件夹。使用以下命令：
+
+sudo vmware-hgfsclient
+sudo vmhgfs-fuse .host:/ /mnt/hgfs/ -o allow_other
+1
+2
+这将共享文件夹挂载到 /mnt/hgfs/ 目录中。请确保该目录存在。
+
+查看日志： 检查 VMware Tools 的日志文件，看是否有关于共享文件夹的错误或警告。您可以在 /var/log/vmware-tools 目录中找到这些日志文件。
+
 <hr />
 版权信息
