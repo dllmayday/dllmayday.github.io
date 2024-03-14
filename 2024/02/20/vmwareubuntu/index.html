@@ -14,7 +14,7 @@
 <meta property="og:description" content="无法联网sudo service network-manager stopsudo rm &#x2F;var&#x2F;lib&#x2F;NetworkManager&#x2F;NetworkManager.statesudo service network-manager start sudo gedit &#x2F;etc&#x2F;NetworkManager&#x2F;NetworkMan">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-20T09:00:32.000Z">
-<meta property="article:modified_time" content="2024-02-21T06:38:05.922Z">
+<meta property="article:modified_time" content="2024-03-14T02:18:21.697Z">
 <meta property="article:author" content="Starry Don">
 <meta property="article:tag" content="vmware">
 <meta name="twitter:card" content="summary">
@@ -117,6 +117,12 @@
 <p>IBus拼音：sudo apt-get install ibus-pinyin （命令解释：sudo 以超级权限去执行，apt-get install 安装一个新软件包 ibus-pinyin软件包名称）<br>谷歌拼音输入法：sudo apt-get install ibus-googlepinyin<br>Sun拼音输入法：sudo apt-get install ibus-sunpinyin<br>二.配置输入法：<br>终端里面输入ibus-setup，输入法的配置界面就会弹出，IBus Preference设置被打开。我们在Input Method选项卡中，选择自己喜欢的输入方式，并配置自己喜欢的快捷键即可。<br>注意：如果发现切换中英文的小图标在左上角没有出现，可以打开系统设置在地区和语言中添加Chinese（pinyin）就会显示</p>
 <p>若以上步骤无效时，参考一下步骤：<br>打开命令行依次输入：</p>
 <p>sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4<br>启动：im-config -s -ibus<br>安装pinyin引擎：sudo apt-get install ibus-pinyin<br>打开设置：ibus-setup，添加pinyin</p>
+<h2 id="VMware-上使用-Ubuntu-20-虚拟机时无法显示共享磁盘的问题解决"><a href="#VMware-上使用-Ubuntu-20-虚拟机时无法显示共享磁盘的问题解决" class="headerlink" title="VMware 上使用 Ubuntu 20 虚拟机时无法显示共享磁盘的问题解决"></a>VMware 上使用 Ubuntu 20 虚拟机时无法显示共享磁盘的问题解决</h2><p>VMware Tools 安装： 确保您已经在 Ubuntu 20 虚拟机中安装了 VMware Tools。VMware Tools 提供了一些增强功能，包括共享文件夹的支持。您可以在 VMware 虚拟机菜单中找到安装 VMware Tools 的选项。</p>
+<p>共享文件夹设置： 在 VMware 虚拟机设置中，确保已正确配置共享文件夹。您可以通过编辑虚拟机设置，然后在 “选项” 标签卡下选择 “共享文件夹” 来配置共享文件夹。</p>
+<p>检查权限： 确保您在 Ubuntu 中有足够的权限访问共享文件夹。确保您的用户属于正确的用户组，并且有权限读取和写入共享文件夹。</p>
+<p>重新挂载共享文件夹： 在 Ubuntu 中，您可以尝试重新挂载共享文件夹。使用以下命令：</p>
+<p>sudo vmware-hgfsclient<br>sudo vmhgfs-fuse .host:&#x2F; &#x2F;mnt&#x2F;hgfs&#x2F; -o allow_other<br>1<br>2<br>这将共享文件夹挂载到 &#x2F;mnt&#x2F;hgfs&#x2F; 目录中。请确保该目录存在。</p>
+<p>查看日志： 检查 VMware Tools 的日志文件，看是否有关于共享文件夹的错误或警告。您可以在 &#x2F;var&#x2F;log&#x2F;vmware-tools 目录中找到这些日志文件。</p>
 <hr />
 版权信息
       
