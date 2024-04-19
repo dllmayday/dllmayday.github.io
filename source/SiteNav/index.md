@@ -39,7 +39,7 @@ date: 2024-02-21 14:40:49
 
 # AI会话
 
-[Copilot - Microsoft](https://copilot.microsoft.com/) | [ChatGPT- OpenAI(outlook)](https://chat.openai.com/) | [Bard - Google](https://bard.google.com/chat) | [文心一言 - Baidu](https://yiyan.baidu.com/)
+[Copilot - Microsoft](https://copilot.microsoft.com/) | [ChatGPT- OpenAI(outlook)](https://chat.openai.com/) | [Bard - Google](https://bard.google.com/chat) | [文心一言 - Baidu](https://yiyan.baidu.com/) | [Kimi](https://kimi.moonshot.cn/)
 
 # AI绘画
 
@@ -49,10 +49,15 @@ date: 2024-02-21 14:40:49
 ## 数字图书馆
 [idata](https://www.cn-ki.net/) | [z-lib](https://z-lib.io/) | [libGen](https://librarygenesis.net/)zh/ | [sci-hub](www.sci-hub.se) | [researchgate](https://www.researchgate.net/)|[小木虫](https://muchong.com/) |[虫部落](https://scholar.chongbuluo.com/)
 
+
+## 矢量素材库
+ 
+[阿里矢量素材库](https://www.iconfont.cn/) | [iconscout](https://iconscout.com/) | [Freepik](https://www.freepik.com/) |[FlatIcon](https://www.flaticon.com/) |[ICONS8](https://icons8.com/) | [iconarchive](https://www.iconarchive.com/) | [pixcap](https://pixcap.com/)
+
 ## 杂七杂八
 
 [filehorse - app download](https://www.filehorse.com/)
-[矢量素材库](https://www.iconfont.cn/)
+
 [JSFiddle-HTML/CSS/JS效果预览](https://jsfiddle.net/)
 [V2free(foxmail)](https://w1.v2ai.top/user)
 
