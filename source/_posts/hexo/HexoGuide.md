@@ -1,17 +1,20 @@
 ---
 title: Hexo使用技巧
-date: 2024-02-05 14:42:53
-tags: Hexo
 categories:
 - 技术分享
 - Hexo
+tags: Hexo
+description: 
+image: 
+copyright: true     
+date: 2024-02-05 14:42:53
 ---
 
 ## 使用技巧
 
 ## 修改站点网页分享链接为github站点url
 
-修改Hexo工程根目录下_config.yml文件中url为 GitHub Page URL
+2024-02-01 15:31:07修改Hexo工程根目录下_config.yml文件中url为 GitHub Page URL
 
 ```
 url: https://dllmayday.github.io/
