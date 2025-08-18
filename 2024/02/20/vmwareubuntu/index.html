@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>vmware-ubuntu使用问题解决 | 仰望星空,脚踏实地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="无法联网sudo service network-manager stopsudo rm &#x2F;var&#x2F;lib&#x2F;NetworkManager&#x2F;NetworkManager.statesudo service network-manager start sudo gedit &#x2F;etc&#x2F;NetworkManager&#x2F;NetworkMan">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vmware-ubuntu使用问题解决">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/20/vmwareubuntu/index.html">
+<meta property="og:site_name" content="仰望星空,脚踏实地">
+<meta property="og:description" content="无法联网sudo service network-manager stopsudo rm &#x2F;var&#x2F;lib&#x2F;NetworkManager&#x2F;NetworkManager.statesudo service network-manager start sudo gedit &#x2F;etc&#x2F;NetworkManager&#x2F;NetworkMan">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-20T09:00:32.000Z">
+<meta property="article:modified_time" content="2025-08-18T09:22:36.264Z">
+<meta property="article:author" content="Starry Don">
+<meta property="article:tag" content="vmware">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">仰望星空,脚踏实地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Starry Don&#39;s BLOG</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+        
+          <a class="main-nav-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94">生活随笔</a>
+        
+          <a class="main-nav-link" href="/SiteNav">站点导航</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dllmayday.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<script src="/js/star-bg.js"></script>
+
+      <div class="outer">
+        <section id="main"><article id="post-vmwareubuntu" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/20/vmwareubuntu/" class="article-date">
+  <time class="dt-published" datetime="2024-02-20T09:00:32.000Z" itemprop="datePublished">2024-02-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      vmware-ubuntu使用问题解决
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="无法联网"><a href="#无法联网" class="headerlink" title="无法联网"></a>无法联网</h2><p>sudo service network-manager stop<br>sudo rm &#x2F;var&#x2F;lib&#x2F;NetworkManager&#x2F;NetworkManager.state<br>sudo service network-manager start</p>
+<p>sudo gedit &#x2F;etc&#x2F;NetworkManager&#x2F;NetworkManager.conf<br>把 managed &#x3D;false改成true</p>
+<h2 id="磁盘空间压缩"><a href="#磁盘空间压缩" class="headerlink" title="磁盘空间压缩"></a>磁盘空间压缩</h2><p>sudo &#x2F;usr&#x2F;bin&#x2F;vmware-toolbox-cmd disk list<br>sudo &#x2F;usr&#x2F;bin&#x2F;vmware-toolbox-cmd disk shrink &#x2F;</p>
+<h2 id="ubuntu系统安装中文输入法"><a href="#ubuntu系统安装中文输入法" class="headerlink" title="ubuntu系统安装中文输入法"></a>ubuntu系统安装中文输入法</h2><p>一. 安装输入法<br>下面任选一种即可：</p>
+<p>IBus拼音：sudo apt-get install ibus-pinyin （命令解释：sudo 以超级权限去执行，apt-get install 安装一个新软件包 ibus-pinyin软件包名称）<br>谷歌拼音输入法：sudo apt-get install ibus-googlepinyin<br>Sun拼音输入法：sudo apt-get install ibus-sunpinyin<br>二.配置输入法：<br>终端里面输入ibus-setup，输入法的配置界面就会弹出，IBus Preference设置被打开。我们在Input Method选项卡中，选择自己喜欢的输入方式，并配置自己喜欢的快捷键即可。<br>注意：如果发现切换中英文的小图标在左上角没有出现，可以打开系统设置在地区和语言中添加Chinese（pinyin）就会显示</p>
+<p>若以上步骤无效时，参考一下步骤：<br>打开命令行依次输入：</p>
+<p>sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4<br>启动：im-config -s -ibus<br>安装pinyin引擎：sudo apt-get install ibus-pinyin<br>打开设置：ibus-setup，添加pinyin</p>
+<h2 id="VMware-上使用-Ubuntu-20-虚拟机时无法显示共享磁盘的问题解决"><a href="#VMware-上使用-Ubuntu-20-虚拟机时无法显示共享磁盘的问题解决" class="headerlink" title="VMware 上使用 Ubuntu 20 虚拟机时无法显示共享磁盘的问题解决"></a>VMware 上使用 Ubuntu 20 虚拟机时无法显示共享磁盘的问题解决</h2><p>VMware Tools 安装： 确保您已经在 Ubuntu 20 虚拟机中安装了 VMware Tools。VMware Tools 提供了一些增强功能，包括共享文件夹的支持。您可以在 VMware 虚拟机菜单中找到安装 VMware Tools 的选项。</p>
+<p>共享文件夹设置： 在 VMware 虚拟机设置中，确保已正确配置共享文件夹。您可以通过编辑虚拟机设置，然后在 “选项” 标签卡下选择 “共享文件夹” 来配置共享文件夹。</p>
+<p>检查权限： 确保您在 Ubuntu 中有足够的权限访问共享文件夹。确保您的用户属于正确的用户组，并且有权限读取和写入共享文件夹。</p>
+<p>重新挂载共享文件夹： 在 Ubuntu 中，您可以尝试重新挂载共享文件夹。使用以下命令：</p>
+<p>sudo vmware-hgfsclient<br>sudo vmhgfs-fuse .host:&#x2F; &#x2F;mnt&#x2F;hgfs&#x2F; -o allow_other<br>1<br>2<br>这将共享文件夹挂载到 &#x2F;mnt&#x2F;hgfs&#x2F; 目录中。请确保该目录存在。</p>
+<p>查看日志： 检查 VMware Tools 的日志文件，看是否有关于共享文件夹的错误或警告。您可以在 &#x2F;var&#x2F;log&#x2F;vmware-tools 目录中找到这些日志文件。</p>
+<hr />
+版权信息
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/20/vmwareubuntu/" data-id="cmegx01rc001cu8t3cgtud16j" data-title="vmware-ubuntu使用问题解决" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vmware/" rel="tag">vmware</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/02/20/beyondcompare/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Beyond Compare密钥失效解决
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/20/cvtcolor/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">颜色转换</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Debug/">Debug</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/GLOG/">GLOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Visual-Studio/">Visual Studio</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/colorspace/">colorspace</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/dbus/">dbus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/virtual-machine/">virtual-machine</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%95%B0%E5%AD%A6/">数学</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Cmake/" style="font-size: 20px;">Cmake</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Debug/" style="font-size: 20px;">Debug</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GLM/" style="font-size: 10px;">GLM</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dbus/" style="font-size: 10px;">dbus</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" style="font-size: 20px;">交叉编译</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a> <a href="/tags/%E6%AC%A7%E6%8B%89%E8%A7%92/" style="font-size: 10px;">欧拉角</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 10px;">环境变量</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/02/14/dbus/sd-bus-demo/">sd-bus-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/cmake/cmakeinnerbuildoption/">cmake常见编译选项</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/virt-manager/virt-manager/">virt-manager虚拟机安装</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/28/dockerguide/">docker使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/GDB/">GDB调试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Starry Don<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" class="mobile-nav-link">技术分享</a>
+  
+    <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="mobile-nav-link">生活随笔</a>
+  
+    <a href="/SiteNav" class="mobile-nav-link">站点导航</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/cursor-stars.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

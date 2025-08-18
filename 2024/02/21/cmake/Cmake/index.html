@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Cmake基本语法 | 仰望星空,脚踏实地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="子目录添加12345cmake_minimum_required(VERSION 3.0)project(&lt;工程名&gt;)#将子目录添加到生成中add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL] [SYSTEM])">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cmake基本语法">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/cmake/Cmake/index.html">
+<meta property="og:site_name" content="仰望星空,脚踏实地">
+<meta property="og:description" content="子目录添加12345cmake_minimum_required(VERSION 3.0)project(&lt;工程名&gt;)#将子目录添加到生成中add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL] [SYSTEM])">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-21T07:14:50.000Z">
+<meta property="article:modified_time" content="2025-08-18T09:22:36.252Z">
+<meta property="article:author" content="Starry Don">
+<meta property="article:tag" content="Cmake">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">仰望星空,脚踏实地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Starry Don&#39;s BLOG</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+        
+          <a class="main-nav-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94">生活随笔</a>
+        
+          <a class="main-nav-link" href="/SiteNav">站点导航</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dllmayday.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<script src="/js/star-bg.js"></script>
+
+      <div class="outer">
+        <section id="main"><article id="post-cmake/Cmake" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/21/cmake/Cmake/" class="article-date">
+  <time class="dt-published" datetime="2024-02-21T07:14:50.000Z" itemprop="datePublished">2024-02-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Cmake基本语法
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="子目录添加"><a href="#子目录添加" class="headerlink" title="子目录添加"></a>子目录添加</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION 3.0)</span><br><span class="line">project(&lt;工程名&gt;)</span><br><span class="line">#将子目录添加到生成中</span><br><span class="line">add_subdirectory(source_dir [binary_dir] [EXCLUDE_FROM_ALL] [SYSTEM])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<h2 id="工程构建"><a href="#工程构建" class="headerlink" title="工程构建"></a>工程构建</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION 3.0)</span><br><span class="line">project(&lt;工程名&gt;)</span><br><span class="line"></span><br><span class="line">#终端输出当前工程目录</span><br><span class="line">message(&quot;Project PATH: $&#123;PROJECT_SOURCE_DIR&#125;&quot;)</span><br><span class="line"></span><br><span class="line">#设置编译目标输出路径</span><br><span class="line">SET(EXECUTABLE_OUTPUT_PATH &lt;输出路径&gt;)</span><br><span class="line"></span><br><span class="line">#设置编译参数</span><br><span class="line">set(CMAKE_CXX_FLAGS &quot;$&#123;CMAKE_CXX_FLAGS&#125; -O3 -std=c++14 -fPIC -Wall&quot;)</span><br><span class="line">set(CMAKE_C_FLAGS   &quot;$&#123;CMAKE_C_FLAGS&#125;   -O3 -std=c++14 -fPIC -Wall&quot;)</span><br><span class="line">add_compile_options(-std=c++14 -Wno-write-strings -Wno-unused-result -O3)</span><br><span class="line">add_definitions(-DFOO -DBAR ...)</span><br><span class="line"></span><br><span class="line">#库查找</span><br><span class="line">find_package(&lt;package&gt; [version] [EXACT] [QUIET] [MODULE]</span><br><span class="line">             [REQUIRED] [[COMPONENTS] [components...]]</span><br><span class="line">             [OPTIONAL_COMPONENTS components...]</span><br><span class="line">             [NO_POLICY_SCOPE])</span><br><span class="line"></span><br><span class="line">#引入头文件</span><br><span class="line">include_directories(&lt;头文件路径&gt;)</span><br><span class="line">target_include_directories(target &lt;头文件路径&gt;)</span><br><span class="line">#指定链接库路径</span><br><span class="line">link_directories(&lt;链接库路径&gt;）</span><br><span class="line"></span><br><span class="line">#查找在某个路径下的所有源文件,并将输出结果列表储存在指定的变量中</span><br><span class="line">aux_source_directory(&lt;路径名&gt;      &lt;变量名&gt;)</span><br><span class="line">#增加变量</span><br><span class="line">set(&lt;变量名&gt;   &lt;值&gt;)</span><br><span class="line"></span><br><span class="line">#指定编译输出</span><br><span class="line">add_library(&lt;目标输出名&gt; SHARED &lt;所有源文件列表&gt;)</span><br><span class="line">add_library(&lt;目标输出名&gt; STATIC &lt;所有源文件列表&gt;)</span><br><span class="line">add_executable(&lt;目标输出名&gt;   &lt;所有源文件列表&gt;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#单个目标输出指定链接库</span><br><span class="line">target_link_libraries(&lt;工程名&gt;  &lt;所有链接的库列表&gt;)</span><br><span class="line">#当前cmake下所有目标输出指定链接库</span><br><span class="line">link_libraries(&lt;所有链接的库列表&gt;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="查找所有源文件"><a href="#查找所有源文件" class="headerlink" title="查找所有源文件"></a>查找所有源文件</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#递归获取source/路径下所有的*.cpp和*.c文件列表</span><br><span class="line">file(GLOB_RECURSE &lt;变量名&gt; CONFIGURE_DEPENDS &quot;source/*.cpp&quot; &quot;source/*.c&quot;)	</span><br><span class="line">#查找在某个路径下的所有源文件,并将输出结果列表储存在指定的变量中</span><br><span class="line">file(GLOB &lt;变量名&gt;CONFIGURE_DEPENDS  &quot;source/*.cpp&quot; &quot;source/*.c&quot;)</span><br><span class="line">#查找在某个路径下的所有源文件,并将输出结果列表储存在指定的变量中</span><br><span class="line">aux_source_directory(&lt;路径名&gt;      &lt;变量名&gt;)</span><br></pre></td></tr></table></figure>
+<h2 id="定义函数，把文件夹下所有子文件夹保存在变量中"><a href="#定义函数，把文件夹下所有子文件夹保存在变量中" class="headerlink" title="定义函数，把文件夹下所有子文件夹保存在变量中"></a>定义函数，把文件夹下所有子文件夹保存在变量中</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">macro(list_sub_dir RESULT CUR_DIR FILTER_LIST)</span><br><span class="line">    file(GLOB_RECURSE CHILDREN LIST_DIRECTORIES true  $&#123;CUR_DIR&#125;/*)</span><br><span class="line">    set(DIR_LIST $&#123;CUR_DIR&#125;)</span><br><span class="line">    foreach(CHILD $&#123;CHILDREN&#125;)</span><br><span class="line">        if(IS_DIRECTORY $&#123;CHILD&#125;)</span><br><span class="line">            set(ADD_FLAG ON)</span><br><span class="line">            foreach(FILTER $&#123;FILTER_LIST&#125;)</span><br><span class="line">                string(FIND &quot;$&#123;FILTER&#125;&quot; &quot;$&#123;CHILD&#125;&quot; RET)</span><br><span class="line">                if($&#123;RET&#125; EQUAL -1)</span><br><span class="line">                    set(ADD_FLAG OFF)</span><br><span class="line">                endif()</span><br><span class="line">            endforeach()</span><br><span class="line">            if($&#123;ADD_FLAG&#125;)</span><br><span class="line">                list(APPEND DIR_LIST $&#123;CHILD&#125;)</span><br><span class="line">            endif()</span><br><span class="line">            unset(ADD_FLAG)</span><br><span class="line">        endif()</span><br><span class="line">    endforeach()</span><br><span class="line">    set($&#123;RESULT&#125; $&#123;DIR_LIST&#125;)</span><br><span class="line">endmacro()</span><br></pre></td></tr></table></figure>
+<h2 id="自动添加子目录下的CMakeLists"><a href="#自动添加子目录下的CMakeLists" class="headerlink" title="自动添加子目录下的CMakeLists"></a>自动添加子目录下的CMakeLists</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">file(GLOB SUB_DIRS RELATIVE $&#123;CMAKE_CURRENT_SOURCE_DIR&#125; $&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/*)</span><br><span class="line">foreach(DIR $&#123;SUB_DIRS&#125;)</span><br><span class="line">    if(EXISTS $&#123;CMAKE_CURRENT_SOURCE_DIR&#125;/$&#123;DIR&#125;/CMakeLists.txt)</span><br><span class="line">        add_subdirectory($&#123;DIR&#125;)</span><br><span class="line">    endif()</span><br><span class="line">endforeach()</span><br></pre></td></tr></table></figure>
+<h2 id="获取文件夹名称"><a href="#获取文件夹名称" class="headerlink" title="获取文件夹名称"></a>获取文件夹名称</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">get_filename_component(module_name $&#123;CMAKE_CURRENT_SOURCE_DIR&#125; NAME)</span><br></pre></td></tr></table></figure>
+<hr />
+版权信息
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/21/cmake/Cmake/" data-id="cmegx01ri001pu8t36c2h51zm" data-title="Cmake基本语法" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/02/21/hisi3569/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Hisi3569交叉编译
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/21/eulor/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">欧拉角</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Debug/">Debug</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/GLOG/">GLOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Visual-Studio/">Visual Studio</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/colorspace/">colorspace</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/dbus/">dbus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/virtual-machine/">virtual-machine</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%95%B0%E5%AD%A6/">数学</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Cmake/" style="font-size: 20px;">Cmake</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Debug/" style="font-size: 20px;">Debug</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GLM/" style="font-size: 10px;">GLM</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dbus/" style="font-size: 10px;">dbus</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" style="font-size: 20px;">交叉编译</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a> <a href="/tags/%E6%AC%A7%E6%8B%89%E8%A7%92/" style="font-size: 10px;">欧拉角</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 10px;">环境变量</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/02/14/dbus/sd-bus-demo/">sd-bus-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/cmake/cmakeinnerbuildoption/">cmake常见编译选项</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/virt-manager/virt-manager/">virt-manager虚拟机安装</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/28/dockerguide/">docker使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/GDB/">GDB调试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Starry Don<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" class="mobile-nav-link">技术分享</a>
+  
+    <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="mobile-nav-link">生活随笔</a>
+  
+    <a href="/SiteNav" class="mobile-nav-link">站点导航</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/cursor-stars.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

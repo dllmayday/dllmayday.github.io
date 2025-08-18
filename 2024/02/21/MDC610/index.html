@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>MDC610交叉编译 | 仰望星空,脚踏实地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="MDC610交叉编译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MDC610交叉编译">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/MDC610/index.html">
+<meta property="og:site_name" content="仰望星空,脚踏实地">
+<meta property="og:description" content="MDC610交叉编译">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-21T07:14:50.000Z">
+<meta property="article:modified_time" content="2025-08-18T09:22:36.250Z">
+<meta property="article:author" content="Starry Don">
+<meta property="article:tag" content="交叉编译">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">仰望星空,脚踏实地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Starry Don&#39;s BLOG</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+        
+          <a class="main-nav-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94">生活随笔</a>
+        
+          <a class="main-nav-link" href="/SiteNav">站点导航</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dllmayday.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<script src="/js/star-bg.js"></script>
+
+      <div class="outer">
+        <section id="main"><article id="post-MDC610" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/21/MDC610/" class="article-date">
+  <time class="dt-published" datetime="2024-02-21T07:14:50.000Z" itemprop="datePublished">2024-02-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      MDC610交叉编译
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>MDC610交叉编译</p>
+<span id="more"></span>
+
+<h1 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h1><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><p>| </p>
+<p>系统架构</p>
+<p> | </p>
+<p>X86_64</p>
+<p> |<br>| — | — |<br>| </p>
+<p>操作系统</p>
+<p> | </p>
+<p>Ubuntu 18.04及以上版本</p>
+<p>须知：</p>
+<p>MDC平台工具链仅支持Ubuntu 18.04版本。</p>
+<p> |</p>
+<h4 id="获取软件包"><a href="#获取软件包" class="headerlink" title="获取软件包"></a>获取软件包</h4><p>| </p>
+<p>软件包</p>
+<p> | </p>
+<p>说明</p>
+<p> |<br>| — | — |<br>| </p>
+<p>MDC_SDK-<em>{version}</em>.tar.gz</p>
+<p> | </p>
+<p>MDC二次开发包，包含gcc和clang编译器、编译框架和平台ARXML文件。</p>
+<p> |<br>| </p>
+<p>MDC_SDK-<em>{version}</em>_llvm.tar.gz</p>
+<p> | </p>
+<p>用于安装llvm编译器。</p>
+<p> |<br>| </p>
+<p>MDC_AOS_rpmlist-<em>{version}</em>.tar.gz</p>
+<p> | </p>
+<p>用于在交叉编译环境中安装第三方库。</p>
+<p> |<br>| </p>
+<p>MDC_AOS_rpmlist-*{version}_*llvm.tar.gz</p>
+<p> | </p>
+<p>用于在安装了llvm的编译环境中安装第三方库。</p>
+<p> |<br>| </p>
+<p>MDC-<em>{version}</em>.tar.gz</p>
+<p> | </p>
+<p>MDC产品包，包含AP平台包，OS镜像，以及MCU、CPLD、BIOS等固件包。</p>
+<p> |</p>
+<h1 id="2-搭建交叉编译环境"><a href="#2-搭建交叉编译环境" class="headerlink" title="2.搭建交叉编译环境"></a>2.搭建交叉编译环境</h1><ol>
+<li><p>在开发环境中，以普通用户打开终端。</p>
+</li>
+<li><p>进入SDK包（MDC_SDK-<em>{version}</em>.tar.gz）所在目录，并将SDK包解压至指定目录。</p>
+<ol>
+<li><p>执行命令<strong>sudo mkdir -p &#x2F;usr&#x2F;local</strong>，创建目录“&#x2F;usr&#x2F;local”。</p>
+</li>
+<li><p>执行命令<strong>sudo tar -xf MDC_SDK-<em>{version}</em>.tar.gz -C &#x2F;usr&#x2F;local</strong>，将SDK安装包解压至“&#x2F;usr&#x2F;local”目录下，解压即安装。</p>
+<p>解压得到的“mdc_sdk”目录说明如下：</p>
+<p>| </p>
+<p>目录</p>
+<p> | </p>
+<p>说明</p>
+<p> |<br>| — | — |<br>| </p>
+<p>dp_gea</p>
+<p> | </p>
+<p>存在GEA系统环境所需交叉编译器gcc、g++等。</p>
+<p> |<br>| </p>
+<p>manifest</p>
+<p> | </p>
+<p>存在MDC平台的ARXML文件，Sample等。</p>
+<p> |<br>| </p>
+<p>env_check.py</p>
+<p> | </p>
+<p>用于检查Ubuntu、cmake和make版本是否符合要求的脚本。</p>
+<p> |</p>
+</li>
+</ol>
+</li>
+<li><p>确认Ubuntu系统版本为18.04，且已安装满足版本要求的构建&#x2F;调试工具cmake（3.10.2及以上）和make（4.1及以上）。</p>
+<p>在“&#x2F;usr&#x2F;local&#x2F;mdc_sdk”目录下执行校验版本号的脚本命令**.&#x2F;env_check.py**，回显示例如下，若提示不符合版本要求，请根据要求安装或升级至匹配版本。</p>
+<pre class="screen" style="margin: 10px 0px 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">[INFO]cmake version is **OK**, the current version is 3.10.2
+[INFO]make version is **OK**, the current version is 4.1
+[INFO]Ubuntu version is **OK**, the current version is Ubuntu 18.04.6 LTS \n \l</pre>
+</li>
+<li><p>执行如下命令，配置环境变量。</p>
+<p><strong>export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;mdc_sdk&#x2F;dp_gea&#x2F;mdc_cross_compiler&#x2F;bin:$PATH</strong></p>
+</li>
+<li><p>依次执行如下命令，确认环境变量配置正确。</p>
+<ol>
+<li><p><strong>which aarch64-target-linux-gnu-gcc</strong>，通过回显确认gcc的安装路径，即步骤4中的安装路径。</p>
+<pre class="screen" style="margin: 10px 0px 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">/usr/local/mdc_sdk/dp_gea/mdc_cross_compiler/bin/aarch64-target-linux-gnu-gcc</pre>
+</li>
+<li><p>**which aarch64-target-linux-gnu-g++**，通过回显确认g++的安装路径，即步骤4中的安装路径。</p>
+<pre class="screen" style="margin: 10px 0px 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">/usr/local/mdc_sdk/dp_gea/mdc_cross_compiler/bin/aarch64-target-linux-gnu-g++</pre></li>
+</ol>
+</li>
+</ol>
+<h1 id="3-构建应用"><a href="#3-构建应用" class="headerlink" title="3.构建应用"></a>3.构建应用</h1><p>下文以编译helloworld.c文件为例，介绍代码的编译和运行步骤。</p>
+<ol>
+<li><p>编写代码，即编辑helloworld.c文件。代码示例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">        printf(&quot;Hello World!\n&quot;);</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.在开发环境中执行命令export CC&#x3D;aarch64-target-linux-gnu-gcc，指定编译器<br>3.创建并编写构建文件（Makefile）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">src_file=helloworld.c</span><br><span class="line">elf_file=helloworld</span><br><span class="line">all:</span><br><span class="line">        $&#123;CC&#125; -I $&#123;SYSROOT&#125;/usr/include -L $&#123;SYSROOT&#125;/usr/lib64 $&#123;src_file&#125; -o $&#123;elf_file&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>编译helloworld.c文件。</p>
+<p>进入helloworld.c文件所在目录，依次执行如下命令：</p>
+<ol>
+<li>**export SYSROOT&#x3D;&#x2F;usr&#x2F;local&#x2F;mdc_sdk&#x2F;dp_gea&#x2F;mdc_cross_compiler&#x2F;sysroot&#x2F;**，指定编译目录。</li>
+<li><strong>make</strong>，开始编译。</li>
+</ol>
+</li>
+<li><p>在“helloworld.c”文件所在目录执行命令<strong>ls</strong>，若返回结果含有可执行文件（helloworld），表示编译成功。</p>
+</li>
+<li><p>以SSH连接方式登录MDC系统环境（用户名和密码请参考《调测指南》的“登录操作系统”章节），并在AOS运行环境中运行helloworld。</p>
+</li>
+</ol>
+<h2 id="总结交叉编译脚本，可直接编译cmake工程如下"><a href="#总结交叉编译脚本，可直接编译cmake工程如下" class="headerlink" title="总结交叉编译脚本，可直接编译cmake工程如下:"></a>总结交叉编译脚本，可直接编译cmake工程如下:</h2><p>(1)build_mdc.sh</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ./build</span><br><span class="line">mkdir build</span><br><span class="line">cd ./build</span><br><span class="line">cmake  -DCMAKE_SYSTEM_PROCESSOR=&quot;aarch64&quot; \</span><br><span class="line">        -DCMAKE_TOOLCHAIN_FILE=/usr/local/mdc_sdk/dp_gea/toolchain.cmake \</span><br><span class="line">	..</span><br><span class="line"></span><br><span class="line">make -j8</span><br></pre></td></tr></table></figure>
+<p>(2)toolchain.cmake</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">get_filename_component(TOOLCHAIN_FILE_PATH &quot;$&#123;CMAKE_CURRENT_LIST_FILE&#125;&quot; PATH)</span><br><span class="line"></span><br><span class="line">set(SCFI_SDK_TYPE dp_gea)</span><br><span class="line">set(CMAKE_SYSTEM_NAME Linux)</span><br><span class="line">set(CMAKE_SYSTEM_PROCESSOR arm)</span><br><span class="line"></span><br><span class="line">set(SCFI_REPO $&#123;TOOLCHAIN_FILE_PATH&#125;)</span><br><span class="line"></span><br><span class="line">set(SCFI_MDC_SDK $&#123;SCFI_REPO&#125;/mdc_cross_compiler/sysroot/usr)</span><br><span class="line">set(SCFI_USER_SDK $&#123;SCFI_REPO&#125;/user_repo)</span><br><span class="line">set(SCFI_CROSS_COMPILE $&#123;SCFI_REPO&#125;/mdc_cross_compiler/bin)</span><br><span class="line">set(SCFI_MDC_SDK_CMAKE $&#123;SCFI_MDC_SDK&#125;/lib/cmake)</span><br><span class="line">set(SCFI_USER_SDK_CMAKE $&#123;SCFI_USER_SDK&#125;/lib/cmake)</span><br><span class="line"></span><br><span class="line">file(RELATIVE_PATH SCFI_REPO_RELATIVE_MDC_CMAKE  $&#123;SCFI_MDC_SDK_CMAKE&#125; $&#123;SCFI_REPO&#125;)</span><br><span class="line">file(RELATIVE_PATH SCFI_REPO_RELATIVE_USER_CMAKE $&#123;SCFI_USER_SDK_CMAKE&#125; $&#123;SCFI_REPO&#125;)</span><br><span class="line">file(RELATIVE_PATH SCFI_MDC_RELATIVE_USER_SDK  $&#123;SCFI_USER_SDK&#125; $&#123;SCFI_MDC_SDK&#125;)</span><br><span class="line">file(RELATIVE_PATH SCFI_USER_RELATIVE_MDC_SDK $&#123;SCFI_MDC_SDK&#125; $&#123;SCFI_USER_SDK&#125;)</span><br><span class="line">set(ara-exec_DIR $&#123;SCFI_MDC_SDK_CMAKE&#125;/exec/)</span><br><span class="line">set(CMAKE_C_COMPILER $&#123;SCFI_CROSS_COMPILE&#125;/aarch64-target-linux-gnu-gcc)</span><br><span class="line">set(CMAKE_CXX_COMPILER $&#123;SCFI_CROSS_COMPILE&#125;/aarch64-target-linux-gnu-g++)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH $&#123;SCFI_USER_SDK&#125; $&#123;SCFI_MDC_SDK&#125; $&#123;CMAKE_FIND_ROOT_PATH&#125;)</span><br><span class="line"></span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)</span><br></pre></td></tr></table></figure>
+
+<hr />
+版权信息
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/21/MDC610/" data-id="cmegx01qc0003u8t3b6ny0q39" data-title="MDC610交叉编译" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" rel="tag">交叉编译</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/02/21/GDB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          GDB调试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/21/QNXcoredump/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">QNX下位机coredump调试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Debug/">Debug</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/GLOG/">GLOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Visual-Studio/">Visual Studio</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/colorspace/">colorspace</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/dbus/">dbus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/virtual-machine/">virtual-machine</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%95%B0%E5%AD%A6/">数学</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Cmake/" style="font-size: 20px;">Cmake</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Debug/" style="font-size: 20px;">Debug</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GLM/" style="font-size: 10px;">GLM</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dbus/" style="font-size: 10px;">dbus</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" style="font-size: 20px;">交叉编译</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a> <a href="/tags/%E6%AC%A7%E6%8B%89%E8%A7%92/" style="font-size: 10px;">欧拉角</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 10px;">环境变量</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/02/14/dbus/sd-bus-demo/">sd-bus-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/cmake/cmakeinnerbuildoption/">cmake常见编译选项</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/virt-manager/virt-manager/">virt-manager虚拟机安装</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/28/dockerguide/">docker使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/GDB/">GDB调试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Starry Don<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" class="mobile-nav-link">技术分享</a>
+  
+    <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="mobile-nav-link">生活随笔</a>
+  
+    <a href="/SiteNav" class="mobile-nav-link">站点导航</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/cursor-stars.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

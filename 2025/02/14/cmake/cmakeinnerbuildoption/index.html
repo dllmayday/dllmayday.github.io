@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>cmake常见编译选项 | 仰望星空,脚踏实地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cmake常见编译选项">
+<meta property="og:url" content="https://dllmayday.github.io/2025/02/14/cmake/cmakeinnerbuildoption/index.html">
+<meta property="og:site_name" content="仰望星空,脚踏实地">
+<meta property="og:description" content="&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-14T08:46:10.000Z">
+<meta property="article:modified_time" content="2025-08-18T09:22:36.252Z">
+<meta property="article:author" content="Starry Don">
+<meta property="article:tag" content="Cmake">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">仰望星空,脚踏实地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Starry Don&#39;s BLOG</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+        
+          <a class="main-nav-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94">生活随笔</a>
+        
+          <a class="main-nav-link" href="/SiteNav">站点导航</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dllmayday.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<script src="/js/star-bg.js"></script>
+
+      <div class="outer">
+        <section id="main"><article id="post-cmake/cmakeinnerbuildoption" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/02/14/cmake/cmakeinnerbuildoption/" class="article-date">
+  <time class="dt-published" datetime="2025-02-14T08:46:10.000Z" itemprop="datePublished">2025-02-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      cmake常见编译选项
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>CMake 提供了一些内置的编译选项和变量，用于控制编译过程、优化构建配置、设置安装路径等。以下是一些常见的 CMake 内置编译选项：</p>
+<h3 id="1-CMAKE-BUILD-TYPE"><a href="#1-CMAKE-BUILD-TYPE" class="headerlink" title="1. CMAKE_BUILD_TYPE"></a>1. <strong><code>CMAKE_BUILD_TYPE</code></strong></h3><span id="more"></span>
+
+<p>   设置构建类型，这决定了生成的编译选项和优化级别。常见的值有：</p>
+<ul>
+<li><code>Debug</code>：调试模式，生成符号文件以便调试。</li>
+<li><code>Release</code>：发布模式，进行优化，去除调试信息。</li>
+<li><code>RelWithDebInfo</code>：带调试信息的发布模式，包含优化和调试信息。</li>
+<li><code>MinSizeRel</code>：优化生成最小的可执行文件。</li>
+</ul>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_TYPE=Release ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-CMAKE-CXX-FLAGS-CMAKE-C-FLAGS"><a href="#2-CMAKE-CXX-FLAGS-CMAKE-C-FLAGS" class="headerlink" title="2. CMAKE_CXX_FLAGS &#x2F; CMAKE_C_FLAGS"></a>2. <strong><code>CMAKE_CXX_FLAGS</code> &#x2F; <code>CMAKE_C_FLAGS</code></strong></h3><p>   分别为 C++ 和 C 编译器设置额外的编译标志。例如，启用 <code>-Wall</code> 警告或其他编译器特性：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_CXX_FLAGS=<span class="string">&quot;-Wall -O2&quot;</span> ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-CMAKE-CXX-COMPILER-CMAKE-C-COMPILER"><a href="#3-CMAKE-CXX-COMPILER-CMAKE-C-COMPILER" class="headerlink" title="3. CMAKE_CXX_COMPILER &#x2F; CMAKE_C_COMPILER"></a>3. <strong><code>CMAKE_CXX_COMPILER</code> &#x2F; <code>CMAKE_C_COMPILER</code></strong></h3><p>   指定用于 C++ 和 C 编译的编译器路径。如果不指定，CMake 会使用系统默认的编译器。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_CXX_COMPILER=/path/to/g++ ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-CMAKE-INSTALL-PREFIX"><a href="#4-CMAKE-INSTALL-PREFIX" class="headerlink" title="4. CMAKE_INSTALL_PREFIX"></a>4. <strong><code>CMAKE_INSTALL_PREFIX</code></strong></h3><p>   设置 <code>make install</code> 时的安装路径。默认情况下，安装路径是 <code>/usr/local</code>（或 Windows 上的 <code>C:/Program Files/</code>）。通过 <code>-DCMAKE_INSTALL_PREFIX</code> 可以自定义安装目录。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_INSTALL_PREFIX=/path/to/install ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-CMAKE-VERBOSE-MAKEFILE"><a href="#5-CMAKE-VERBOSE-MAKEFILE" class="headerlink" title="5. CMAKE_VERBOSE_MAKEFILE"></a>5. <strong><code>CMAKE_VERBOSE_MAKEFILE</code></strong></h3><p>   启用或禁用生成的 Makefile 的详细输出。设置为 <code>TRUE</code> 会输出详细的编译和链接命令。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_VERBOSE_MAKEFILE=TRUE ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-CMAKE-EXPORT-COMPILE-COMMANDS"><a href="#6-CMAKE-EXPORT-COMPILE-COMMANDS" class="headerlink" title="6. CMAKE_EXPORT_COMPILE_COMMANDS"></a>6. <strong><code>CMAKE_EXPORT_COMPILE_COMMANDS</code></strong></h3><p>   设置为 <code>TRUE</code> 时，CMake 会生成 <code>compile_commands.json</code> 文件，包含项目的编译命令，通常用于集成开发环境（IDE）或工具，如 <code>clang-tidy</code>、<code>clangd</code> 等。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=YES ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-CMAKE-TOOLCHAIN-FILE"><a href="#7-CMAKE-TOOLCHAIN-FILE" class="headerlink" title="7. CMAKE_TOOLCHAIN_FILE"></a>7. <strong><code>CMAKE_TOOLCHAIN_FILE</code></strong></h3><p>   使用指定的工具链文件来设置交叉编译的环境或使用不同的编译器。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_TOOLCHAIN_FILE=/path/to/toolchain.cmake ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-CMAKE-PREFIX-PATH"><a href="#8-CMAKE-PREFIX-PATH" class="headerlink" title="8. CMAKE_PREFIX_PATH"></a>8. <strong><code>CMAKE_PREFIX_PATH</code></strong></h3><p>   指定 CMake 查找外部包的路径。例如，告诉 CMake 在特定路径中查找第三方库或依赖。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_PREFIX_PATH=/path/to/libraries ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-CMAKE-INSTALL-RPATH"><a href="#9-CMAKE-INSTALL-RPATH" class="headerlink" title="9. CMAKE_INSTALL_RPATH"></a>9. <strong><code>CMAKE_INSTALL_RPATH</code></strong></h3><p>   设置动态库查找路径（<code>rpath</code>）的安装路径。常用于指定安装后可执行文件查找动态库的路径。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_INSTALL_RPATH=/path/to/libs ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-CMAKE-OSX-ARCHITECTURES"><a href="#10-CMAKE-OSX-ARCHITECTURES" class="headerlink" title="10. CMAKE_OSX_ARCHITECTURES"></a>10. <strong><code>CMAKE_OSX_ARCHITECTURES</code></strong></h3><p>   在 macOS 上指定构建架构（如 <code>x86_64</code> 或 <code>arm64</code>）。用于构建多个架构的二进制文件。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_OSX_ARCHITECTURES=<span class="string">&quot;x86_64;arm64&quot;</span> ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-CMAKE-BUILD-PARALLEL-LEVEL"><a href="#11-CMAKE-BUILD-PARALLEL-LEVEL" class="headerlink" title="11. CMAKE_BUILD_PARALLEL_LEVEL"></a>11. <strong><code>CMAKE_BUILD_PARALLEL_LEVEL</code></strong></h3><p>   控制并行构建的数量。默认情况下，CMake 会根据系统的核心数自动选择并行构建的级别，可以通过该选项覆盖。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_BUILD_PARALLEL_LEVEL=4 ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-CMAKE-DISABLE-FIND-PACKAGE"><a href="#12-CMAKE-DISABLE-FIND-PACKAGE" class="headerlink" title="12. CMAKE_DISABLE_FIND_PACKAGE_&lt;PACKAGE_NAME&gt;"></a>12. <strong><code>CMAKE_DISABLE_FIND_PACKAGE_&lt;PACKAGE_NAME&gt;</code></strong></h3><p>   禁用查找特定包的功能。例如，如果你不想让 CMake 查找 <code>OpenGL</code> 包，可以使用：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_DISABLE_FIND_PACKAGE_OpenGL=TRUE ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-CMAKE-EXPORT-NO-PACKAGE-REGISTRY"><a href="#13-CMAKE-EXPORT-NO-PACKAGE-REGISTRY" class="headerlink" title="13. CMAKE_EXPORT_NO_PACKAGE_REGISTRY"></a>13. <strong><code>CMAKE_EXPORT_NO_PACKAGE_REGISTRY</code></strong></h3><p>   禁用将包信息写入包注册表。如果你不希望 CMake 在生成过程中修改包注册表，可以设置此选项：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=TRUE ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-CMAKE-SKIP-INSTALL-RPATH"><a href="#14-CMAKE-SKIP-INSTALL-RPATH" class="headerlink" title="14. CMAKE_SKIP_INSTALL_RPATH"></a>14. <strong><code>CMAKE_SKIP_INSTALL_RPATH</code></strong></h3><p>   跳过设置安装后的 <code>rpath</code>，通常用于控制库的路径查找行为。</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_SKIP_INSTALL_RPATH=TRUE ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-CMAKE-PREFIX-PATH"><a href="#15-CMAKE-PREFIX-PATH" class="headerlink" title="15. CMAKE_PREFIX_PATH"></a>15. <strong><code>CMAKE_PREFIX_PATH</code></strong></h3><p>   用于添加 CMake 搜索库、包的路径。例如，如果依赖的库不在系统标准路径下，可以指定一个路径：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_PREFIX_PATH=/path/to/special/libs ..</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-CMAKE-FIND-FRAMEWORK"><a href="#16-CMAKE-FIND-FRAMEWORK" class="headerlink" title="16. CMAKE_FIND_FRAMEWORK"></a>16. <strong><code>CMAKE_FIND_FRAMEWORK</code></strong></h3><p>   在 macOS 上使用这个选项可以控制是否查找 Frameworks：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake -DCMAKE_FIND_FRAMEWORK=LAST ..</span><br></pre></td></tr></table></figure>
+
+<p>这些是 CMake 中最常见的内置编译选项，你可以根据项目的具体需求来传递不同的参数和选项。你是否正在配置某个特定的项目？如果有任何问题或需要更多细节，随时告诉我！</p>
+<hr />
+版权信息
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2025/02/14/cmake/cmakeinnerbuildoption/" data-id="cmegx01rk001tu8t346pn4qsz" data-title="cmake常见编译选项" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cmake/" rel="tag">Cmake</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2025/02/14/dbus/sd-bus-demo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          sd-bus-demo
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2025/02/14/virt-manager/virt-manager/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">virt-manager虚拟机安装</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Debug/">Debug</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/GLOG/">GLOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Visual-Studio/">Visual Studio</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/colorspace/">colorspace</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/dbus/">dbus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/virtual-machine/">virtual-machine</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%95%B0%E5%AD%A6/">数学</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Cmake/" style="font-size: 20px;">Cmake</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Debug/" style="font-size: 20px;">Debug</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GLM/" style="font-size: 10px;">GLM</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dbus/" style="font-size: 10px;">dbus</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" style="font-size: 20px;">交叉编译</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a> <a href="/tags/%E6%AC%A7%E6%8B%89%E8%A7%92/" style="font-size: 10px;">欧拉角</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 10px;">环境变量</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/02/14/dbus/sd-bus-demo/">sd-bus-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/cmake/cmakeinnerbuildoption/">cmake常见编译选项</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/virt-manager/virt-manager/">virt-manager虚拟机安装</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/28/dockerguide/">docker使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/GDB/">GDB调试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Starry Don<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" class="mobile-nav-link">技术分享</a>
+  
+    <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="mobile-nav-link">生活随笔</a>
+  
+    <a href="/SiteNav" class="mobile-nav-link">站点导航</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/cursor-stars.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

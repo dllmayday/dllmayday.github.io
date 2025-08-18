@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hisi3569交叉编译 | 仰望星空,脚踏实地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Hisi3569交叉编译">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hisi3569交叉编译">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/hisi3569/index.html">
+<meta property="og:site_name" content="仰望星空,脚踏实地">
+<meta property="og:description" content="Hisi3569交叉编译">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-02-21T07:14:50.000Z">
+<meta property="article:modified_time" content="2025-08-18T09:22:36.260Z">
+<meta property="article:author" content="Starry Don">
+<meta property="article:tag" content="交叉编译">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">仰望星空,脚踏实地</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Starry Don&#39;s BLOG</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB">技术分享</a>
+        
+          <a class="main-nav-link" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94">生活随笔</a>
+        
+          <a class="main-nav-link" href="/SiteNav">站点导航</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+          <a class="main-nav-link" href="/about">关于</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://dllmayday.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+<script src="/js/star-bg.js"></script>
+
+      <div class="outer">
+        <section id="main"><article id="post-hisi3569" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/21/hisi3569/" class="article-date">
+  <time class="dt-published" datetime="2024-02-21T07:14:50.000Z" itemprop="datePublished">2024-02-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hisi3569交叉编译
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Hisi3569交叉编译</p>
+<span id="more"></span>
+
+<p>#1.  系统<br>         ubuntu18.04 64位<br>         由于提供交叉编译程序为32位。需要在64上安装支持32位程序运行库,命令如下 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dpkg --print-architecture  #确认64为架构的内核</span><br><span class="line"> dpkg --print-foreign-architectures  #确认打开了多架构支持功能</span><br></pre></td></tr></table></figure>
+<p>输出i386为已打开 ，如果没有需要手动打开</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg --add-architecture i386</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<p> 再执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get dist-upgrade  ( #这一步是更新所有的软件，如果你对新版本软件的需求不是那么迫切，可以不执行)</span><br><span class="line">```      </span><br><span class="line">安装32位支持库</span><br></pre></td></tr></table></figure>
+<pre><code>sudo apt install libc6:i386
+ sudo apt install libstdc++6:i386
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#2. 下载生成交叉编译环境</span><br><span class="line">       aarch64-himix200-linux.tgz。</span><br><span class="line">     执行    source ./aarch64-himix200-linux.install [dirname]  生成交叉编译环境到dirname</span><br><span class="line">#3. 配置交叉编译环境脚本 </span><br><span class="line"> ## 编写配置脚本configure-environment.sh,内容如下:</span><br></pre></td></tr></table></figure>
+<p>#!&#x2F;bin&#x2F;sh</p>
+<p>SDK_PATH&#x3D;”&#x2F;home&#x2F;username&#x2F;aarch64-himix200-linux&#x2F;“<br>export TOOLCHAIN_SYS&#x3D;aarch64-himix200-linux<br>export TOOLCHAIN_PREFIX&#x3D;$TOOLCHAIN_SYS-<br>export SDK_PATH_NATIVE&#x3D;$SDK_PATH&#x2F;<br>export SDK_PATH_TARGET&#x3D;$SDK_PATH&#x2F;target<br>export PATH&#x3D;$SDK_PATH_NATIVE&#x2F;bin&#x2F;aarch64-himix200-linux:$PATH<br>export CPATH&#x3D;$SDK_PATH_TARGET&#x2F;usr&#x2F;include:$CPATH<br>export PKG_CONFIG_SYSROOT_DIR&#x3D;$SDK_PATH_TARGET<br>export PKG_CONFIG_PATH&#x3D;$SDK_PATH_TARGET&#x2F;usr&#x2F;lib&#x2F;pkgconfig<br>export PKG_CONFIG_ALLOW_SYSTEM_LIBS&#x3D;1<br>#export CONFIG_SITE&#x3D;$SDK_PATH&#x2F;site-config-$REAL_MULTIMACH_TARGET_SYS<br>export CC&#x3D;”${SDK_PATH}&#x2F;bin&#x2F;${TOOLCHAIN_PREFIX}gcc”<br>#–sysroot&#x3D;$SDK_PATH_TARGET<br>export CXX&#x3D;”${SDK_PATH}&#x2F;bin&#x2F;${TOOLCHAIN_PREFIX}g++”</p>
+<h1 id="–sysroot-SDK-PATH-TARGET"><a href="#–sysroot-SDK-PATH-TARGET" class="headerlink" title="–sysroot&#x3D;$SDK_PATH_TARGET"></a>–sysroot&#x3D;$SDK_PATH_TARGET</h1><p>export GDB&#x3D;${TOOLCHAIN_PREFIX}gdb<br>export CPP&#x3D;”${TOOLCHAIN_PREFIX}gcc -E –sysroot&#x3D;$SDK_PATH_TARGET”<br>export LD&#x3D;”${TOOLCHAIN_PREFIX}ld –sysroot&#x3D;$SDK_PATH_TARGET”<br>export NM&#x3D;${TOOLCHAIN_PREFIX}nm<br>export AS&#x3D;${TOOLCHAIN_PREFIX}as<br>export AR&#x3D;${TOOLCHAIN_PREFIX}ar<br>export RANLIB&#x3D;${TOOLCHAIN_PREFIX}ranlib<br>export OBJCOPY&#x3D;${TOOLCHAIN_PREFIX}objcopy<br>export OBJDUMP&#x3D;${TOOLCHAIN_PREFIX}objdump<br>export STRIP&#x3D;${TOOLCHAIN_PREFIX}strip<br>export CONFIGURE_FLAGS&#x3D;”–target&#x3D;aarch64-linux –host&#x3D;aarch64-linux –build&#x3D;x86_64-linux –with-libtool-sysroot&#x3D;$SDK_PATH_TARGET”<br>export CPPFLAGS&#x3D;” –sysroot&#x3D;$SDK_PATH_TARGET”<br>export CFLAGS&#x3D;”$CPPFLAGS”<br>export CXXFLAGS&#x3D;”$CPPFLAGS”<br>export LDFLAGS&#x3D;” –sysroot&#x3D;$SDK_PATH_TARGET”<br>export OECORE_NATIVE_SYSROOT&#x3D;$SDK_PATH_NATIVE<br>export OECORE_TARGET_SYSROOT&#x3D;$SDK_PATH_TARGET<br>export OECORE_ACLOCAL_OPTS&#x3D;”-I $SDK_PATH_NATIVE&#x2F;usr&#x2F;share&#x2F;aclocal”<br>export OECORE_DISTRO_VERSION&#x3D;”2020.05”<br>export OECORE_SDK_VERSION&#x3D;”2020.05”</p>
+<h1 id="Append-environment-subscripts"><a href="#Append-environment-subscripts" class="headerlink" title="Append environment subscripts"></a>Append environment subscripts</h1><p>if [ -d “$OECORE_TARGET_SYSROOT&#x2F;environment-setup.d” ]; then<br>    for envfile in $OECORE_TARGET_SYSROOT&#x2F;environment-setup.d&#x2F;<em>.sh; do<br>        . $envfile<br>    done<br>fi<br>if [ -d “$OECORE_NATIVE_SYSROOT&#x2F;environment-setup.d” ]; then<br>    for envfile in $OECORE_NATIVE_SYSROOT&#x2F;environment-setup.d&#x2F;</em>.sh; do<br>        . $envfile<br>    done<br>fi</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">##cmake 编译工程</span><br><span class="line"></span><br><span class="line">（1）编写build_hisi.sh,内容如下:</span><br></pre></td></tr></table></figure>
+<p>#!&#x2F;bin&#x2F;bash<br>source &#x2F;home&#x2F;username&#x2F;Hisi&#x2F;configure-environment.sh<br>cd .&#x2F;build<br>#cmake -DCMAKE_SYSTEM_VERSION&#x3D;”3569” -DCMAKE_SYSTEM_PROCESSOR&#x3D;”aarch64” -DCMAKE_TOOLCHAIN_FILE&#x3D;.&#x2F;toolchain_hisi.cmake -G”Unix Makefiles” ..<br>cmake ..<br>make -j8</p>
+<pre><code>4. demo编译
+    下载解压freetype-2.10.2
+    修改configure-environment.sh 下SDK_PATH 为自己的路径
+     build_hisi.sh下修改configure-environment.sh为自己的路径
+     build_his.sh文件拷贝到freetype-2.10.2解压后CMakeList同级路径。
+   执行命令:
+    mkdir build
+   ./build_his.sh
+
+&lt;hr /&gt;
+版权信息
+</code></pre>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://dllmayday.github.io/2024/02/21/hisi3569/" data-id="cmegx01r4000uu8t3bxcx06pk" data-title="Hisi3569交叉编译" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" rel="tag">交叉编译</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/02/21/QNXcoredump/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          QNX下位机coredump调试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/02/21/cmake/Cmake/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Cmake基本语法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Cmake/">Cmake</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Debug/">Debug</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Docker/">Docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/GLOG/">GLOG</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Visual-Studio/">Visual Studio</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/colorspace/">colorspace</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/dbus/">dbus</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/virtual-machine/">virtual-machine</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E5%AE%9E%E7%94%A8%E6%8A%80%E5%B7%A7/">实用技巧</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E6%95%B0%E5%AD%A6/">数学</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Beyond-Compare/" style="font-size: 10px;">Beyond Compare</a> <a href="/tags/CMRC/" style="font-size: 10px;">CMRC</a> <a href="/tags/Cmake/" style="font-size: 20px;">Cmake</a> <a href="/tags/Color/" style="font-size: 10px;">Color</a> <a href="/tags/Debug/" style="font-size: 20px;">Debug</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/GLM/" style="font-size: 10px;">GLM</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/VisualStudio/" style="font-size: 10px;">VisualStudio</a> <a href="/tags/WSL/" style="font-size: 10px;">WSL</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/dbus/" style="font-size: 10px;">dbus</a> <a href="/tags/dependents/" style="font-size: 10px;">dependents</a> <a href="/tags/encoding/" style="font-size: 10px;">encoding</a> <a href="/tags/glog/" style="font-size: 10px;">glog</a> <a href="/tags/tar/" style="font-size: 10px;">tar</a> <a href="/tags/vmware/" style="font-size: 10px;">vmware</a> <a href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" style="font-size: 20px;">交叉编译</a> <a href="/tags/%E5%87%A0%E4%BD%95/" style="font-size: 10px;">几何</a> <a href="/tags/%E6%AC%A7%E6%8B%89%E8%A7%92/" style="font-size: 10px;">欧拉角</a> <a href="/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" style="font-size: 10px;">环境变量</a> <a href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/" style="font-size: 10px;">虚拟机</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">二月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">四月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/02/14/dbus/sd-bus-demo/">sd-bus-demo</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/cmake/cmakeinnerbuildoption/">cmake常见编译选项</a>
+          </li>
+        
+          <li>
+            <a href="/2025/02/14/virt-manager/virt-manager/">virt-manager虚拟机安装</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/28/dockerguide/">docker使用教程</a>
+          </li>
+        
+          <li>
+            <a href="/2024/02/21/GDB/">GDB调试</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2025 Starry Don<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB" class="mobile-nav-link">技术分享</a>
+  
+    <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="mobile-nav-link">生活随笔</a>
+  
+    <a href="/SiteNav" class="mobile-nav-link">站点导航</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+<script src="/js/cursor-stars.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
