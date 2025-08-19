@@ -3,7 +3,7 @@
   var colors = ['#ff5252','#ffb142','#fffa65','#32ff7e','#18dcff','#7d5fff','#e84393','#f3a683','#f7d794','#778beb','#e77f67','#cf6a87'];
   function createStar(x, y) {
     var star = document.createElement('div');
-    var size = Math.random() * 8 + 8;
+    var size = Math.random() * 4 + 4;
     star.style.position = 'fixed';
     star.style.left = (x - size/2) + 'px';
     star.style.top = (y - size/2) + 'px';

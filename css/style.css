@@ -301,7 +301,7 @@ body {
   font-weight: bold;
 }
 #header {
-  height: 300px;
+  height: 180px;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
@@ -341,17 +341,16 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("images/banner.jpg") center #000;
-  background-size: cover;
+  background: transparent;
   z-index: -1;
 }
 #header-title {
   text-align: center;
-  height: 40px;
+  height: 28px;
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -20px;
+  margin-top: -14px;
 }
 #logo,
 #subtitle {
@@ -361,17 +360,17 @@ body {
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 #logo {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 28px;
   letter-spacing: 2px;
 }
 #subtitle {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 12px;
+  line-height: 12px;
   letter-spacing: 1px;
 }
 #subtitle-wrap {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 #main-nav {
   float: left;
