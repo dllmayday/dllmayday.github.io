@@ -6,15 +6,15 @@
   
   <title>博客日志 | 仰望星空,脚踏实地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="博客日志  fetch(&#39;&#x2F;content.json&#39;).then(r&#x3D;&gt;r.json()).then(data&#x3D;&gt;{   let html &#x3D; data.posts.map(p&#x3D;&gt;&#96;${p.title} - ${p.date.slice(0,10)}&#96;).join(&#39;&#39;);   document.getElementById(&#39;post-log&#39;).innerHTML &#x3D; html; });">
+  <meta name="description" content="fetch(&#39;&#x2F;content.json&#39;).then(r&#x3D;&gt;r.json()).then(data&#x3D;&gt;{   let html &#x3D; data.posts.map(p&#x3D;&gt;&#96;${p.title} - ${p.date.slice(0,10)}&#96;).join(&#39;&#39;);   document.getElementById(&#39;post-log&#39;).innerHTML &#x3D; html; });">
 <meta property="og:type" content="website">
 <meta property="og:title" content="博客日志">
 <meta property="og:url" content="https://dllmayday.github.io/blog-log.html">
 <meta property="og:site_name" content="仰望星空,脚踏实地">
-<meta property="og:description" content="博客日志  fetch(&#39;&#x2F;content.json&#39;).then(r&#x3D;&gt;r.json()).then(data&#x3D;&gt;{   let html &#x3D; data.posts.map(p&#x3D;&gt;&#96;${p.title} - ${p.date.slice(0,10)}&#96;).join(&#39;&#39;);   document.getElementById(&#39;post-log&#39;).innerHTML &#x3D; html; });">
+<meta property="og:description" content="fetch(&#39;&#x2F;content.json&#39;).then(r&#x3D;&gt;r.json()).then(data&#x3D;&gt;{   let html &#x3D; data.posts.map(p&#x3D;&gt;&#96;${p.title} - ${p.date.slice(0,10)}&#96;).join(&#39;&#39;);   document.getElementById(&#39;post-log&#39;).innerHTML &#x3D; html; });">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-19T05:59:09.989Z">
+<meta property="article:modified_time" content="2025-08-19T09:58:06.742Z">
 <meta property="article:author" content="Starry Don">
 <meta name="twitter:card" content="summary">
   
@@ -63,6 +63,8 @@
         
           <a class="main-nav-link" href="/SiteNav">站点导航</a>
         
+          <a class="main-nav-link" href="/OnlineResources">在线资料</a>
+        
           <a class="main-nav-link" href="/archives">归档</a>
         
           <a class="main-nav-link" href="/about">关于</a>
@@ -106,7 +108,7 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="博客日志"><a href="#博客日志" class="headerlink" title="博客日志"></a>博客日志</h1><ul id="post-log"></ul>
+        <ul id="post-log"></ul>
 <script>
 fetch('/content.json').then(r=>r.json()).then(data=>{
   let html = data.posts.map(p=>`<li><a href="${p.path}">${p.title}</a> - ${p.date.slice(0,10)}</li>`).join('');
@@ -117,7 +119,7 @@ fetch('/content.json').then(r=>r.json()).then(data=>{
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/blog-log.html" data-id="cmei5cvgm000060t3bdz67dgu" data-title="博客日志" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/blog-log.html" data-id="cmeid7pfu0000dot308ov4zod" data-title="博客日志" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -250,6 +252,8 @@ fetch('/content.json').then(r=>r.json()).then(data=>{
     <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94" class="mobile-nav-link">生活随笔</a>
   
     <a href="/SiteNav" class="mobile-nav-link">站点导航</a>
+  
+    <a href="/OnlineResources" class="mobile-nav-link">在线资料</a>
   
     <a href="/archives" class="mobile-nav-link">归档</a>
   

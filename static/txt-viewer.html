@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>TXT 文档查看器</title>
+    <style>
+        body { font-family: monospace; margin: 20px; }
+        pre { white-space: pre-wrap; word-wrap: break-word; border: 1px solid #ccc; padding: 10px; height: 80vh; overflow: auto; }
+    </style>
+</head>
+<body>
+    <h2>TXT 文档内容</h2>
+    <pre id="txtContent">正在加载...</pre>
+
+    <script>
+        // 从 URL 获取 file 参数
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const filePath = getQueryParam('file'); // 获取 file 参数
+        const txtContainer = document.getElementById('txtContent');
+
+        if (filePath) {
+            // 使用 fetch 请求文本文件
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) throw new Error('文件加载失败');
+                    return response.text();
+                })
+                .then(data => {
+                    txtContainer.textContent = data;
+                })
+                .catch(err => {
+                    txtContainer.textContent = '加载失败: ' + err;
+                });
+        } else {
+            txtContainer.textContent = '未指定文件路径';
+        }
+    </script>
+</body>
+</html>
