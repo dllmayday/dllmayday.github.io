@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF 查看</title>
+  <style>
+    body { margin: 0; }
+    iframe { width: 100%; height: 100vh; border: none; }
+  </style>
+</head>
+<body>
+  <iframe id="pdfFrame"></iframe>
+
+  <script>
+    // 从 URL 获取 file 参数
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get("file");
+
+    if (file) {
+      document.getElementById("pdfFrame").src = file;
+      const fileName = file.split('/').pop(); // 获取文件名
+      document.title = fileName ? fileName : "PDF 查看";
+    } else {
+      document.body.innerHTML = "<p style='text-align:center;padding:20px;'>未指定 PDF 文件</p>";
+      document.title = "未指定 PDF 文件";
+    }
+  </script>
+</body>
+</html>

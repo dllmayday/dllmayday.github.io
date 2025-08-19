@@ -2,7 +2,6 @@
 title: 博客日志
 date: 2025-08-19
 ---
-# 博客日志
 
 <ul id="post-log"></ul>
 <script>
