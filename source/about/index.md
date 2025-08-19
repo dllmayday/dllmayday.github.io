@@ -39,6 +39,7 @@ date: 2024-02-05 09:44:46
 <div class="author-mail" style="font-weight:bold; margin:8px 0;">E-mail：dllmayday@163.com</div>
 
 下面是本站的相关信息：
-- [博客统计]()
-- [博客日志]()
+- 博客统计：<span id="busuanzi_container_site_pv" style="display:inline;">访问量：<span id="busuanzi_value_site_pv"></span></span>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+- [博客日志](/blog-log.html)
 
