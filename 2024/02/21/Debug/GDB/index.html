@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>MDC610交叉编译 | 仰望星空,脚踏实地</title>
+  <title>GDB调试 | 仰望星空,脚踏实地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="MDC610交叉编译">
+  <meta name="description" content="##1.Debugged program settings 12set args [Arguments]show args  ##2.break commandCreates a breakpoint at a specified line, address or function.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MDC610交叉编译">
-<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/MDC610/index.html">
+<meta property="og:title" content="GDB调试">
+<meta property="og:url" content="https://dllmayday.github.io/2024/02/21/Debug/GDB/index.html">
 <meta property="og:site_name" content="仰望星空,脚踏实地">
-<meta property="og:description" content="MDC610交叉编译">
+<meta property="og:description" content="##1.Debugged program settings 12set args [Arguments]show args  ##2.break commandCreates a breakpoint at a specified line, address or function.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-21T07:14:50.000Z">
 <meta property="article:modified_time" content="2026-05-13T06:17:27.357Z">
 <meta property="article:author" content="Starry Don">
-<meta property="article:tag" content="交叉编译">
+<meta property="article:tag" content="Debug">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="仰望星空,脚踏实地" type="application/atom+xml">
@@ -87,14 +87,14 @@
 <script src="/js/star-bg.js"></script>
 
       <div class="outer">
-        <section id="main"><article id="post-MDC610" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Debug/GDB" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2024/02/21/MDC610/" class="article-date">
+    <a href="/2024/02/21/Debug/GDB/" class="article-date">
   <time class="dt-published" datetime="2024-02-21T07:14:50.000Z" itemprop="datePublished">2024-02-21</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/">交叉编译</a>
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>►<a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/Debug/">Debug</a>
   </div>
 
   </div>
@@ -105,7 +105,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      MDC610交叉编译
+      GDB调试
     </h1>
   
 
@@ -113,126 +113,41 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>MDC610交叉编译</p>
+        <p>##1.Debugged program settings</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set args [Arguments]</span><br><span class="line">show args</span><br></pre></td></tr></table></figure>
+
+<p>##2.break command<br>Creates a breakpoint at a specified line, address or function.</p>
 <span id="more"></span>
 
-<h1 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h1><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><p>| </p>
-<p>系统架构</p>
-<p> | </p>
-<p>X86_64</p>
-<p> |<br>| — | — |<br>| </p>
-<p>操作系统</p>
-<p> | </p>
-<p>Ubuntu 18.04及以上版本</p>
-<p>须知：</p>
-<p>MDC平台工具链仅支持Ubuntu 18.04版本。</p>
-<p> |</p>
-<h4 id="获取软件包"><a href="#获取软件包" class="headerlink" title="获取软件包"></a>获取软件包</h4><p>| </p>
-<p>软件包</p>
-<p> | </p>
-<p>说明</p>
-<p> |<br>| — | — |<br>| </p>
-<p>MDC_SDK-<em>{version}</em>.tar.gz</p>
-<p> | </p>
-<p>MDC二次开发包，包含gcc和clang编译器、编译框架和平台ARXML文件。</p>
-<p> |<br>| </p>
-<p>MDC_SDK-<em>{version}</em>_llvm.tar.gz</p>
-<p> | </p>
-<p>用于安装llvm编译器。</p>
-<p> |<br>| </p>
-<p>MDC_AOS_rpmlist-<em>{version}</em>.tar.gz</p>
-<p> | </p>
-<p>用于在交叉编译环境中安装第三方库。</p>
-<p> |<br>| </p>
-<p>MDC_AOS_rpmlist-*{version}_*llvm.tar.gz</p>
-<p> | </p>
-<p>用于在安装了llvm的编译环境中安装第三方库。</p>
-<p> |<br>| </p>
-<p>MDC-<em>{version}</em>.tar.gz</p>
-<p> | </p>
-<p>MDC产品包，包含AP平台包，OS镜像，以及MCU、CPLD、BIOS等固件包。</p>
-<p> |</p>
-<h1 id="2-搭建交叉编译环境"><a href="#2-搭建交叉编译环境" class="headerlink" title="2.搭建交叉编译环境"></a>2.搭建交叉编译环境</h1><ol>
-<li><p>在开发环境中，以普通用户打开终端。</p>
-</li>
-<li><p>进入SDK包（MDC_SDK-<em>{version}</em>.tar.gz）所在目录，并将SDK包解压至指定目录。</p>
-<ol>
-<li><p>执行命令<strong>sudo mkdir -p &#x2F;usr&#x2F;local</strong>，创建目录“&#x2F;usr&#x2F;local”。</p>
-</li>
-<li><p>执行命令<strong>sudo tar -xf MDC_SDK-<em>{version}</em>.tar.gz -C &#x2F;usr&#x2F;local</strong>，将SDK安装包解压至“&#x2F;usr&#x2F;local”目录下，解压即安装。</p>
-<p>解压得到的“mdc_sdk”目录说明如下：</p>
-<p>| </p>
-<p>目录</p>
-<p> | </p>
-<p>说明</p>
-<p> |<br>| — | — |<br>| </p>
-<p>dp_gea</p>
-<p> | </p>
-<p>存在GEA系统环境所需交叉编译器gcc、g++等。</p>
-<p> |<br>| </p>
-<p>manifest</p>
-<p> | </p>
-<p>存在MDC平台的ARXML文件，Sample等。</p>
-<p> |<br>| </p>
-<p>env_check.py</p>
-<p> | </p>
-<p>用于检查Ubuntu、cmake和make版本是否符合要求的脚本。</p>
-<p> |</p>
-</li>
-</ol>
-</li>
-<li><p>确认Ubuntu系统版本为18.04，且已安装满足版本要求的构建&#x2F;调试工具cmake（3.10.2及以上）和make（4.1及以上）。</p>
-<p>在“&#x2F;usr&#x2F;local&#x2F;mdc_sdk”目录下执行校验版本号的脚本命令**.&#x2F;env_check.py**，回显示例如下，若提示不符合版本要求，请根据要求安装或升级至匹配版本。</p>
-<pre class="screen" style="margin: 10px 0px 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">[INFO]cmake version is **OK**, the current version is 3.10.2
-[INFO]make version is **OK**, the current version is 4.1
-[INFO]Ubuntu version is **OK**, the current version is Ubuntu 18.04.6 LTS \n \l</pre>
-</li>
-<li><p>执行如下命令，配置环境变量。</p>
-<p><strong>export PATH&#x3D;&#x2F;usr&#x2F;local&#x2F;mdc_sdk&#x2F;dp_gea&#x2F;mdc_cross_compiler&#x2F;bin:$PATH</strong></p>
-</li>
-<li><p>依次执行如下命令，确认环境变量配置正确。</p>
-<ol>
-<li><p><strong>which aarch64-target-linux-gnu-gcc</strong>，通过回显确认gcc的安装路径，即步骤4中的安装路径。</p>
-<pre class="screen" style="margin: 10px 0px 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">/usr/local/mdc_sdk/dp_gea/mdc_cross_compiler/bin/aarch64-target-linux-gnu-gcc</pre>
-</li>
-<li><p>**which aarch64-target-linux-gnu-g++**，通过回显确认g++的安装路径，即步骤4中的安装路径。</p>
-<pre class="screen" style="margin: 10px 0px 0px; padding: 0px; font-family: ConfluenceInstalledFont, monospace;">/usr/local/mdc_sdk/dp_gea/mdc_cross_compiler/bin/aarch64-target-linux-gnu-g++</pre></li>
-</ol>
-</li>
-</ol>
-<h1 id="3-构建应用"><a href="#3-构建应用" class="headerlink" title="3.构建应用"></a>3.构建应用</h1><p>下文以编译helloworld.c文件为例，介绍代码的编译和运行步骤。</p>
-<ol>
-<li><p>编写代码，即编辑helloworld.c文件。代码示例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">        printf(&quot;Hello World!\n&quot;);</span><br><span class="line">        return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.在开发环境中执行命令export CC&#x3D;aarch64-target-linux-gnu-gcc，指定编译器<br>3.创建并编写构建文件（Makefile）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">src_file=helloworld.c</span><br><span class="line">elf_file=helloworld</span><br><span class="line">all:</span><br><span class="line">        $&#123;CC&#125; -I $&#123;SYSROOT&#125;/usr/include -L $&#123;SYSROOT&#125;/usr/lib64 $&#123;src_file&#125; -o $&#123;elf_file&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>编译helloworld.c文件。</p>
-<p>进入helloworld.c文件所在目录，依次执行如下命令：</p>
-<ol>
-<li>**export SYSROOT&#x3D;&#x2F;usr&#x2F;local&#x2F;mdc_sdk&#x2F;dp_gea&#x2F;mdc_cross_compiler&#x2F;sysroot&#x2F;**，指定编译目录。</li>
-<li><strong>make</strong>，开始编译。</li>
-</ol>
-</li>
-<li><p>在“helloworld.c”文件所在目录执行命令<strong>ls</strong>，若返回结果含有可执行文件（helloworld），表示编译成功。</p>
-</li>
-<li><p>以SSH连接方式登录MDC系统环境（用户名和密码请参考《调测指南》的“登录操作系统”章节），并在AOS运行环境中运行helloworld。</p>
-</li>
-</ol>
-<h2 id="总结交叉编译脚本，可直接编译cmake工程如下"><a href="#总结交叉编译脚本，可直接编译cmake工程如下" class="headerlink" title="总结交叉编译脚本，可直接编译cmake工程如下:"></a>总结交叉编译脚本，可直接编译cmake工程如下:</h2><p>(1)build_mdc.sh</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ./build</span><br><span class="line">mkdir build</span><br><span class="line">cd ./build</span><br><span class="line">cmake  -DCMAKE_SYSTEM_PROCESSOR=&quot;aarch64&quot; \</span><br><span class="line">        -DCMAKE_TOOLCHAIN_FILE=/usr/local/mdc_sdk/dp_gea/toolchain.cmake \</span><br><span class="line">	..</span><br><span class="line"></span><br><span class="line">make -j8</span><br></pre></td></tr></table></figure>
-<p>(2)toolchain.cmake</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">get_filename_component(TOOLCHAIN_FILE_PATH &quot;$&#123;CMAKE_CURRENT_LIST_FILE&#125;&quot; PATH)</span><br><span class="line"></span><br><span class="line">set(SCFI_SDK_TYPE dp_gea)</span><br><span class="line">set(CMAKE_SYSTEM_NAME Linux)</span><br><span class="line">set(CMAKE_SYSTEM_PROCESSOR arm)</span><br><span class="line"></span><br><span class="line">set(SCFI_REPO $&#123;TOOLCHAIN_FILE_PATH&#125;)</span><br><span class="line"></span><br><span class="line">set(SCFI_MDC_SDK $&#123;SCFI_REPO&#125;/mdc_cross_compiler/sysroot/usr)</span><br><span class="line">set(SCFI_USER_SDK $&#123;SCFI_REPO&#125;/user_repo)</span><br><span class="line">set(SCFI_CROSS_COMPILE $&#123;SCFI_REPO&#125;/mdc_cross_compiler/bin)</span><br><span class="line">set(SCFI_MDC_SDK_CMAKE $&#123;SCFI_MDC_SDK&#125;/lib/cmake)</span><br><span class="line">set(SCFI_USER_SDK_CMAKE $&#123;SCFI_USER_SDK&#125;/lib/cmake)</span><br><span class="line"></span><br><span class="line">file(RELATIVE_PATH SCFI_REPO_RELATIVE_MDC_CMAKE  $&#123;SCFI_MDC_SDK_CMAKE&#125; $&#123;SCFI_REPO&#125;)</span><br><span class="line">file(RELATIVE_PATH SCFI_REPO_RELATIVE_USER_CMAKE $&#123;SCFI_USER_SDK_CMAKE&#125; $&#123;SCFI_REPO&#125;)</span><br><span class="line">file(RELATIVE_PATH SCFI_MDC_RELATIVE_USER_SDK  $&#123;SCFI_USER_SDK&#125; $&#123;SCFI_MDC_SDK&#125;)</span><br><span class="line">file(RELATIVE_PATH SCFI_USER_RELATIVE_MDC_SDK $&#123;SCFI_MDC_SDK&#125; $&#123;SCFI_USER_SDK&#125;)</span><br><span class="line">set(ara-exec_DIR $&#123;SCFI_MDC_SDK_CMAKE&#125;/exec/)</span><br><span class="line">set(CMAKE_C_COMPILER $&#123;SCFI_CROSS_COMPILE&#125;/aarch64-target-linux-gnu-gcc)</span><br><span class="line">set(CMAKE_CXX_COMPILER $&#123;SCFI_CROSS_COMPILE&#125;/aarch64-target-linux-gnu-g++)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH $&#123;SCFI_USER_SDK&#125; $&#123;SCFI_MDC_SDK&#125; $&#123;CMAKE_FIND_ROOT_PATH&#125;)</span><br><span class="line"></span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)</span><br><span class="line">set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)</span><br></pre></td></tr></table></figure>
+
+
+<p>###Syntax</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">break</span><br><span class="line">b</span><br><span class="line">break [Function Name]</span><br><span class="line">break [File Name]:[Line Number]</span><br><span class="line">break [Line Number]</span><br><span class="line">break *[Address]</span><br><span class="line">break [...] if [Condition]</span><br><span class="line">break [...] thread [Thread-id]</span><br><span class="line">b [...]</span><br></pre></td></tr></table></figure>
+<p>###Examples<br>Using function name:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(gdb) b main</span><br><span class="line">Breakpoint 1 at 0x401395: file 0.cpp, line 4.</span><br><span class="line">(gdb)</span><br></pre></td></tr></table></figure>
+<p>Using function address:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(gdb) info address main</span><br><span class="line">Symbol &quot;main(int, char**)&quot; is a function at address 0x40138c.</span><br><span class="line">(gdb) break *0x40138c</span><br><span class="line">Breakpoint 2 at 0x40138c: file 0.cpp, line 4.</span><br><span class="line">(gdb)</span><br></pre></td></tr></table></figure>
+<p>Using file name and line number:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(gdb) info line main</span><br><span class="line">Line 4 of &quot;0.cpp&quot; starts at address 0x40138c &lt;main(int, char**)&gt;</span><br><span class="line">and ends at 0x401395 &lt;main(int, char**)+9&gt;.</span><br><span class="line">(gdb) break 0.cpp:4</span><br><span class="line">Breakpoint 3 at 0x401395: file 0.cpp, line 4.</span><br></pre></td></tr></table></figure>
+<p>Using line number only:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(gdb) info source</span><br><span class="line">Current source file is 0.cpp</span><br><span class="line">Compilation directory is C:\MinGW\bin</span><br><span class="line">Located in c:\mingw\bin\0.cpp</span><br><span class="line">Source language is c++.</span><br><span class="line">Compiled with DWARF 2 debugging format.</span><br><span class="line">Does not include preprocessor macro info.</span><br><span class="line">(gdb) break 4</span><br><span class="line">Breakpoint 4 at 0x40138c: file 0.cpp, line 4.</span><br></pre></td></tr></table></figure>
+<p>#3. Shared library commands<br>##info sharedlibrary command</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">info sharedlibrary</span><br><span class="line">info share</span><br></pre></td></tr></table></figure>
+<p>##set solib-search-path command</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set solib-search-path [Directories]</span><br><span class="line">show solib-search-path</span><br></pre></td></tr></table></figure>
+<p>##set sysroot command</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set sysroot [Directory]</span><br><span class="line">set sysroot remote:/</span><br><span class="line">set sysroot remote:[Remote directory]</span><br><span class="line">set solib-absolute-prefix [Directory]</span><br><span class="line">show sysroot</span><br></pre></td></tr></table></figure>
 
 <hr />
 版权信息
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://dllmayday.github.io/2024/02/21/MDC610/" data-id="cmp3oksgr00031cwi41am2rc1" data-title="MDC610交叉编译" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://dllmayday.github.io/2024/02/21/Debug/GDB/" data-id="cmp3qasvm0000dlwi3n303vyz" data-title="GDB调试" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91/" rel="tag">交叉编译</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debug/" rel="tag">Debug</a></li></ul>
 
     </footer>
   </div>
@@ -240,19 +155,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/02/21/GDB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2024/02/21/cmake/Cmake/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          GDB调试
+          Cmake基本语法
         
       </div>
     </a>
   
   
-    <a href="/2024/02/21/QNXcoredump/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2024/02/21/ECU/MDC610/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">QNX下位机coredump调试</div>
+      <div class="article-nav-title">MDC610交叉编译</div>
     </a>
   
 </nav>
