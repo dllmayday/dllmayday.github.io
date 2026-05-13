@@ -22,8 +22,15 @@ date: 2024-02-21 14:40:49
     </li>
     <li><a href="#x-window">X window</a></li>
     <li><a href="#embedded">嵌入式</a></li>
-    <li><a href="#ai-chat">AI会话</a></li>
-    <li><a href="#ai-art">AI绘画</a></li>
+    <li><a href="#ai-llm">AI大模型</a>
+      <ul>
+      <li><a href="#ai-foreign-model">国外大模型</a></li>
+      <li><a href="#ai-foreign-model">国内大模型</a></li>
+      <li><a href="#ai-platform">开放平台</a></li>
+      <li><a href="#ai-related-site">部署应用</a></li>
+      <li><a href="#ai-platform">AI绘画</a></li>
+      </ul>
+    </li>
     <li><a href="#digital-library">数字图书馆</a></li>
     <li><a href="#vector">矢量素材库</a></li>
     <li><a href="#misc">杂七杂八</a></li>
@@ -63,7 +70,11 @@ date: 2024-02-21 14:40:49
 <a href="https://www.stroustrup.com/">C++之父Bjarne Stroustrup的主页</a>
 </p>
 <h2 id="cpp-online">C++ 在线代码编译运行验证</h2>
-<p><a href="https://cpp.sh/">cpp.sh</a></p>
+<p><a href="https://cpp.sh/">cpp.sh</a> |
+<a href="https://coliru.peres.dev/">coliru</a>
+</p> 
+
+
 <h2 id="graphics">图形图像处理</h2>
 <h3 id="shader">Shader</h3>
 <p><a href="https://www.shadertoy.com/">着色器分享</a></p>
@@ -96,16 +107,54 @@ date: 2024-02-21 14:40:49
 <a href="https://tronche.com/gui/x/xlib/">tronche.com/gui/x/xlib</a></p>
 <h2 id="embedded">嵌入式</h2>
 <p><a href="http://www.qnx.com/developers/docs/index.html">QNX使用手册</a></p>
-<h2 id="ai-chat">AI会话</h2>
-<p><a href="https://copilot.microsoft.com/">Copilot - Microsoft</a> | 
-<a href="https://chat.openai.com/">ChatGPT - OpenAI</a> | 
-<a href="https://bard.google.com/chat">Bard - Google</a> | 
-<a href="https://yiyan.baidu.com/">文心一言 - Baidu</a> | 
-<a href="https://kimi.moonshot.cn/">Kimi</a></p>
-<h2 id="ai-art">AI绘画</h2>
-<p><a href="https://huggingface.co/spaces/stabilityai/stable-diffusion">SD</a> | 
+<h2 id="ai-llm">LLM</h2>
+
+<h3 id="ai-chinese-model">国内大模型</h3>
+<a href="https://www.deepseek.com/">DeepSeek</a> |
+<a href="https://chatglm.cn/">ChatGLM</a> |
+<a href="https://kimi.moonshot.cn/">Kimi</a> |
+<a href="https://yuanbao.tencent.com/chat/">元宝</a> |
+<a href="https://www.doubao.com/chat">豆包</a> |
+<a href="https://www.qianwen.com/chat">千问</a> |
+<a href="https://yiyan.baidu.com/">文心一言 - Baidu</a> 
+</p>
+<h3 id="ai-foreign-model">国外大模型</h3>
+<a href="https://chat.openai.com/">ChatGPT</a> | 
+<a href="https://gemini.google.com">Gemini</a> | 
+<a href="https://claude.ai/">Claude</a> | 
+<a href="https://grok.com/">Grok</a>
+<a href="https://copilot.microsoft.com/">Copilot - Microsoft</a> 
+</p>
+<h3 id="ai-platform">开放平台</h3>
+<a href="https://console.volcengine.com/">火山引擎-字节</a> |  
+<a href="https://bailian.console.aliyun.com/">百炼-阿里云</a> | 
+<a href="https://platform.deepseek.com/">DeepSeek</a> |
+<a href="https://bigmodel.cn/">智谱</a> |
+<a href="https://console.cloud.tencent.com/tokenhub/models?Is=home">腾讯云</a>
+</p>
+<a href="https://platform.openai.com/home">OpenAI</a> | 
+<a href="https://platform.claude.com/">Claude</a> |
+<a href="https://aistudio.google.com/">Google AI Studio</a>
+</p>
+<h3 id="ai-related-site">相关站点</h3>
+<a href="https://huggingface.co/huggingface">huggingface</a> |  
+<a href="https://www.modelscope.cn/home">魔塔社区</a> | 
+<a href="https://siliconflow.cn/models">硅基流动</a>
+</p>
+<a href="https://ollama.com/">Ollama</a> |
+<a href="https://docs.vllm.ai/en/latest/">vLLM</a>
+</p>
+<a href="https://docs.openclaw.ai/zh-CN">OpenClaw</a> |
+<a href="https://skills.sh/">Skills</a>
+</p>
+<a href="https://www.coze.cn/overview">扣子-云端Agent开发-字节</a> | 
+<a href="https://dify.ai/zh">Dify: 生产级 Agentic 工作流开发平台</a> |
+</p>
+<h3 id="ai-art">AI绘画</h2>
+<a href="https://huggingface.co/spaces/stabilityai/stable-diffusion">SD</a> | 
 <a href="https://www.midjourneyai.ai/zh-CN">Midjourneyai</a> | 
-<a href="https://www.aigc.cn/favorites/video-generation">AIGC Nav</a></p>
+<a href="https://www.aigc.cn/favorites/video-generation">AIGC Nav</a>
+</p>
 <h2 id="digital-library">数字图书馆</h2>
 <p><a href="https://www.cn-ki.net/">idata</a> | 
 <a href="https://z-lib.io/">z-lib</a> | 
